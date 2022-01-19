@@ -97,7 +97,7 @@
 
 /* 기업활용 참여현황 - 업종별 탭 콘텐츠 */
 .jobCon_list {overflow:hidden;width: 100%;margin: 0 auto 0;/* border-top:2px solid #40454b; */}
-.jobCon_list li {float:left;width: calc(100% / 3);height: 50px;padding:0 20px;line-height:45px;color:#333;border-bottom:1px solid #c6c6c6;letter-spacing: -0.05em;}
+.jobCon_list li {float:left;width: calc(100% / 3);height: 50px;padding:0 20px;line-height:45px;color:#333;border-bottom:1px solid #c6c6c6;letter-spacing: -0.1em;}
 .jobCon_list li:nth-child(3n-1) {border-right: 1px solid #c6c6c6;border-left: 1px solid #c6c6c6;}
 .jobCon_list li b {float:right; color:#7053d7; letter-spacing:-1px;}
 .jobCon_list li i {display:inline-block;margin: 0 5px 0 0;}
@@ -118,7 +118,8 @@
 .circle_summary li .circle_box:hover,
 .circle_summary li .circle_box:focus {border-color: #0e76bc;box-shadow: rgba(14, 118, 188, 0.2) 0px 0px 15px;}
 .circle_summary li .circle_box strong {display:block;width:100%;font-weight: 600;font-size: 2.000em;height: 50px;line-height: 50px;box-sizing:border-box;color: #000000;/* background: #0e76bc; *//* border-radius: 20px; */letter-spacing: -0.03em;}
-.circle_summary li .circle_box i {display: flex;color:#333;font-size: 1em;flex-direction: column;align-items: center;height: 110px;justify-content: space-between;letter-spacing: -0.03em;padding: 0 20px;line-height: 1.2em;}
+.circle_summary li .circle_box i {display: flex;color:#333;font-size: 1em;flex-direction: column;align-items: center;height: 110px;justify-content: center;padding: 0 20px;}
+.circle_summary li .circle_box i > span {word-break: keep-all;-ms-word-break: keep-all;line-height: 1.2em;letter-spacing: -0.03em;display: block;width: 125px;}
 
 .circle_summary .bx-wrapper .bx-prev {left:-50px; background:url(../education/img/controller02.png) no-repeat 0 0;}
 .circle_summary .bx-wrapper .bx-next {right:-50px; background:url(../education/img/controller02.png) no-repeat 0 -35px}

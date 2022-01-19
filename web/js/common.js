@@ -179,6 +179,7 @@ $(document).ready(function() {
         $(".tabContent_1D1").hide();
         var OnTab = $(this).attr("rel");
         $("#" + OnTab).stop().fadeIn(200);
+        $("#" + OnTab + "1").stop().fadeIn(200);
     });
     // 1depth2
     $(".tabContent_1D2").hide();

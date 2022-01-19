@@ -929,23 +929,29 @@
             <div class="statePresent_data">
                 <h3><b>서울</b> 컨설팅 참여기업 <span>70</span></h3>
                 <ul>
-                    <!-- <li><button onclick="location.href='layerPop_company_present'" class="OpenPop" rel="layerPop_company_present" title="기업목록보기"><span>채용</span><b>15</b></button></li>
-                    <li><button onclick="location.href='layerPop_company_present'" class="OpenPop" rel="layerPop_company_present" title="기업목록보기"><span>재직자훈련</span><b>10</b></button></li>
-                    <li><button onclick="location.href='layerPop_company_present'" class="OpenPop" rel="layerPop_company_present" title="기업목록보기"><span>배치·승진</span><b>10</b></button></li>
-                    <li><button onclick="location.href='layerPop_company_present'" class="OpenPop" rel="layerPop_company_present" title="기업목록보기"><span>임금(직무급 도입)</span><b>10</b></button></li>
-                    <li><button onclick="location.href='layerPop_company_present'" class="OpenPop" rel="layerPop_company_present" title="기업목록보기"><span>종합활용 1,2</span><b>10</b></button></li> -->
-                    
-                    
-                    
-                    
-                    
-                <li id="areali_0"><input type="hidden" id="areaCd_0" value="02"><input type="hidden" id="typeCd_0" value="05"><input type="hidden" id="typeCdNm_0" value="기본형"><input type="hidden" id="coCnt_0" value="5"><button rel="" class="OpenPopspan" title="" style="cursor:default"><span>기본형</span><b>5</b></button></li><li id="areali_1"><input type="hidden" id="areaCd_1" value="02"><input type="hidden" id="typeCd_1" value="06"><input type="hidden" id="typeCdNm_1" value="확장형"><input type="hidden" id="coCnt_1" value="23"><button rel="" class="OpenPopspan" title="" style="cursor:default"><span>확장형</span><b>23</b></button></li><li id="areali_2"><input type="hidden" id="areaCd_2" value="02"><input type="hidden" id="typeCd_2" value="07"><input type="hidden" id="typeCdNm_2" value="기본형+확장형"><input type="hidden" id="coCnt_2" value="42"><button rel="" class="OpenPopspan" title="" style="cursor:default"><span>기본형+확장형</span><b>42</b></button></li></ul>
-                <div class="guideTxt2">
-                    
-                    
-                    <!-- <p><i class="iconText_smooth icon_stroke icon_medium icon_pointColor">종합활용1</i>채용 + 재직자훈련</p>
-                    <p><i class="iconText_smooth icon_stroke icon_medium icon_pointColor">종합활용2</i>채용 + 재직자훈련 + 임금 + 배치승진</p> -->
-                </div>
+                    <li id="areali_0">
+                        <input type="hidden" id="areaCd_0" value="02">
+                        <input type="hidden" id="typeCd_0" value="05">
+                        <input type="hidden" id="typeCdNm_0" value="기본형">
+                        <input type="hidden" id="coCnt_0" value="5">
+                        <button rel="" class="OpenPopspan" title="" style="cursor:default"><span>기본형</span><b>5</b></button>
+                    </li>
+                    <li id="areali_1">
+                        <input type="hidden" id="areaCd_1" value="02">
+                        <input type="hidden" id="typeCd_1" value="06">
+                        <input type="hidden" id="typeCdNm_1" value="확장형">
+                        <input type="hidden" id="coCnt_1" value="23">
+                        <button rel="" class="OpenPopspan" title="" style="cursor:default"><span>확장형</span><b>23</b></button>
+                    </li>
+                    <li id="areali_2">
+                        <input type="hidden" id="areaCd_2" value="02">
+                        <input type="hidden" id="typeCd_2" value="07">
+                        <input type="hidden" id="typeCdNm_2" value="기본형+확장형">
+                        <input type="hidden" id="coCnt_2" value="42">
+                        <button rel="" class="OpenPopspan" title="" style="cursor:default"><span>기본형+확장형</span><b>42</b></button>
+                    </li>
+                </ul>
+                <div class="guideTxt2"></div>
                 <div style="display:table-row; text-align:center;">
                     <div style="display:table-cell">
                         <a class="tcs_White" href="/company/ch03/consulting_requestlist.do">컨설팅 신청하기</a>
@@ -961,7 +967,7 @@
             
             <!-- ▽ 종합활용1 -->
             <h4 class="sectionTab tabBtn_2D1" rel="tabCon21" style="cursor: pointer;"><button class="tabindex">기본형(50)</button></h4>
-            <div class="sectionCon tabContent_2D1" id="tabCon21" style="display: none;">
+            <div class="sectionCon tabContent_2D1" id="tabCon21" style="display: block;">
                 <h5>기본형 전체<b>50</b></h5>
                 <ul>
                     <li>서울<b>5</b></li>
@@ -1012,8 +1018,8 @@
             </div>
             
             <!-- ▽ 재직자훈련 -->
-            <h4 class="sectionTab tabBtn_2D1 On" rel="tabCon23" style="cursor: pointer;"><button class="tabindex">기본형+확장형(250)</button></h4>
-            <div class="sectionCon tabContent_2D1" id="tabCon23" style="display: block;">
+            <h4 class="sectionTab tabBtn_2D1" rel="tabCon23" style="cursor: pointer;"><button class="tabindex">기본형+확장형(250)</button></h4>
+            <div class="sectionCon tabContent_2D1" id="tabCon23" style="display: none;">
                 <h5>기본형+확장형 전체<b>250</b></h5>
                 <ul>
                     <li>서울<b>42</b></li>
@@ -1258,122 +1264,122 @@ function fn_openPopClick(){
             <p class="txt_guide">대분류를 선택하시면 해당 대분류의 세분류 단위별 설계 현황을 확인하실 수 있습니다.</p>
             <ul class="circleMain_slide">
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(01)" class="circle_box">
-                    <i class="icon01">01.사업관리 </i>
+                    <i class="icon01"><span>01.사업관리</span> </i>
                         <strong>28</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(02)" class="circle_box">
-                        <i class="icon02">02.경영·회계·사무 </i>
+                        <i class="icon02"><span>02.경영·회계·사무</span> </i>
                         <strong>2,486</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(03)" class="circle_box">
-                        <i class="icon03">03.금융·보험 </i>
+                        <i class="icon03"><span>03.금융·보험</span> </i>
                         <strong>81</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(04)" class="circle_box">
-                        <i class="icon04">04.교육·자연·사회과학 </i>
+                        <i class="icon04"><span>04.교육·자연·사회과학</span> </i>
                         <strong>33</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(05)" class="circle_box">
-                        <i class="icon05">05.법률·경찰·소방·교도·국방 </i>
+                        <i class="icon05"><span>05.법률·경찰·소방·교도·국방</span> </i>
                         <strong>109</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(06)" class="circle_box">
-                        <i class="icon06">06.보건·의료 </i>
+                        <i class="icon06"><span>06.보건·의료</span> </i>
                         <strong>53</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(07)" class="circle_box">
-                        <i class="icon07">07.사회복지·종교 </i>
+                        <i class="icon07"><span>07.사회복지·종교</span> </i>
                         <strong>225</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(08)" class="circle_box">
-                        <i class="icon08">08.문화·예술·디자인·방송 </i>
+                        <i class="icon08"><span>08.문화·예술·디자인·방송</span> </i>
                         <strong>807</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(09)" class="circle_box">
-                        <i class="icon09">09.운전·운송 </i>
+                        <i class="icon09"><span>09.운전·운송</span> </i>
                         <strong>32</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(10)" class="circle_box">
-                        <i class="icon10">10.영업판매 </i>
+                        <i class="icon10"><span>10.영업판매</span> </i>
                         <strong>96</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(11)" class="circle_box">
-                        <i class="icon11">11.경비·청소 </i>
+                        <i class="icon11"><span>11.경비·청소</span> </i>
                         <strong>49</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(12)" class="circle_box">
-                        <i class="icon12">12.이용·숙박·여행·오락·스포츠 </i>
+                        <i class="icon12"><span>12.이용·숙박·여행·오락·스포츠</span> </i>
                         <strong>496</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(13)" class="circle_box">
-                        <i class="icon13">13.음식서비스 </i>
+                        <i class="icon13"><span>13.음식서비스</span> </i>
                         <strong>794</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(14)" class="circle_box">
-                        <i class="icon14">14.건설 </i>
+                        <i class="icon14"><span>14.건설</span> </i>
                         <strong>721</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(15)" class="circle_box">
-                        <i class="icon15">15.기계 </i>
+                        <i class="icon15"><span>15.기계</span> </i>
                         <strong>1,101</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(16)" class="circle_box">
-                        <i class="icon16">16.재료 </i>
+                        <i class="icon16"><span>16.재료</span> </i>
                         <strong>285</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(17)" class="circle_box">
-                        <i class="icon17">17.화학·바이오 </i>
+                        <i class="icon17"><span>17.화학·바이오</span> </i>
                         <strong>19</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(18)" class="circle_box">
-                        <i class="icon18">18.섬유·의복 </i>
+                        <i class="icon18"><span>18.섬유·의복</span> </i>
                         <strong>169</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(19)" class="circle_box">
-                        <i class="icon19">19.전기·전자 </i>
+                        <i class="icon19"><span>19.전기·전자</span> </i>
                         <strong>564</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(20)" class="circle_box">
-                        <i class="icon20">20.정보통신 </i>
+                        <i class="icon20"><span>20.정보통신</span> </i>
                         <strong>977</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(21)" class="circle_box">
-                        <i class="icon21">21.식품가공 </i>
+                        <i class="icon21"><span>21.식품가공</span> </i>
                         <strong>340</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(22)" class="circle_box">
-                        <i class="icon22">22.인쇄·목재·가구·공예 </i>
+                        <i class="icon22"><span>22.인쇄·목재·가구·공예</span> </i>
                         <strong>459</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(23)" class="circle_box">
-                        <i class="icon23">23.환경·에너지·안전 </i>
+                        <i class="icon23"><span>23.환경·에너지·안전</span> </i>
                         <strong>245</strong>
                     </a>
                 </li>
                 <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(24)" class="circle_box">
-                        <i class="icon24">24.농림어업 </i>
+                        <i class="icon24"><span>24.농림어업</span> </i>
                         <strong>56</strong>
                     </a>
                 </li>
