@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+.chart-right > p > span {font-size: 0.867em;color: #7f7f7f;}
+.chart-area.cont2::before {content: "";width: 115px;height: 400px;display: block;position: absolute;background: #7053d7;z-index: 0;}
+/* 기업활용 참여현황 */
+.main_visual {height:356px; min-width:1240px; background: url(../../img/common/bg.png) #2291e4 no-repeat; background-position-x: center;}
+.main_visual > .col_width {position:relative; height:100%; overflow: hidden;}
+.main_visual > .col_width img {float: right; margin: 3px 46px 0 0;}
+.main_visual .mainCopy {position:absolute;  height:157px; font-weight: 700; color: #fff; text-shadow: 2px 2px 6px #287ab7ba; letter-spacing: -3px; line-height: 61px; margin-top: 66px;}
+.main_visual .mainCopy p {font-size: 36px; margin-top: 13px; height: 54px; background: url(../img/mainCopy_p_bg.png); line-height: 50px; font-weight: 200; text-align: center; letter-spacing: -3px;}
+
+.present {/* height: 420px !important; *//* background: #fff; *//* border: solid 1px #ccc; *//* top: -100px; *//* opacity: 97%; */}
+.present  button.consulting_BT {padding: 10px 80px; margin: 20px 0 0 50px; background: #ffe553; text-align: center; border-radius: 30px; font-size: 25px; font-weight: 600; color: #3d3d3d;}
+.present  button.consulting_BT:hover {background: #5a44a5; color: #fff;}
+.map_count {position: absolute;top: -2px;left: 46px;width: 438px;}
+.present_box {position:relative;width:100%;/* height:420px; *//* background:url(../company/img/bg_visualCon.png) repeat-y 0 0; */}
+.tit_present {padding:50px 0 0 50px; font-size:30px; color:#fff; font-family:'NGothic';}
+.tit_present span {display:block; font-size: 34px; padding:12px 0 0;}
+.copy_present {padding:30px 0 0 50px; font-size:20px; color:#ff6;}
+.present_box .btn_present {position:absolute;bottom: 20px;left: 21px;width: 75px;text-align:center;color:#fff;font-size: 1.067em;/* font-family:'NGothic'; */}
+.present_box .btn_present:before {content:'';display:block;margin: 0;width: 75px;height: 75px;line-height:47px;border-radius:50%;background: #553ea2 url(../company/img/icon_visualConOn.png) repeat-y 6px 18px;box-sizing:border-box;background-size: 64px;}
+.present_box .btn_present span {color:#fff;font-weight: 500;line-height: 2.4em;}
+.present_box .btn_present.On {color:#ff6;}
+.present_box .btn_present.On:before {background-color:#fff; background-image:url(../company/img/icon_visualConOff.png);}
+.present_box .btn_present[rel='tabCon1'] {bottom: auto;top: 20px;}
+.present_box .btn_present[rel='tabCon2'] {bottom: 50%;transform: translateY(50%);}
+.present_box .btn_present[rel='tabCon3'] {bottom: 20px;}
+.present_box .btn_present[rel='tabCon1']:before {background-position-y: 20px;}
+.present_box .btn_present[rel='tabCon2']:before {background-position-y: -66px;}
+.present_box .btn_present[rel='tabCon3']:before {background-position-y: -145px;}
+
+
+
+/* 기업활용 참여현황 - 지역별 탭 콘텐츠 */
+.present_box .statePresent_data .tcs_White {color: #fff;background: linear-gradient(45deg, #6f45cd, #5a26cf);color: #fff;font-weight: 400;height: 46px;line-height: 44px;border-radius: 15px;text-align: left;font-size: 1.467em;padding: 0;width: 200px;text-align: center;display: inline-block;}
+.present_box .statePresent_data .tcs_White button:hover {background: linear-gradient(45deg, #2291e4, #5a26cf);}
+.present_box .statePresent_data .tcs_White img {/* float: left; *//* position: absolute; *//* top: 272px; *//* left: 96px; */width: 16px;margin-right: 12px;margin-top: 7px;}
+
+.present_box .con_present {position: relative;width: 735px;height: 400px;display:none;margin-left: 115px;}
+.statePresent_data {position:absolute;top: 40px;right: 40px;width: 300px;display:table;}
+.statePresent_data h3 {position:relative;margin-bottom: 20px;text-align:center;color:#333;font-size: 1.600em;font-weight: 600;}
+.statePresent_data h3 b {display:inline-block;font-weight: 600;}
+.statePresent_data h3 span {display:inline-block;margin:-4px 0 0 5px;color: #7053d7;font-size: 1.600em;vertical-align:middle;}
+.statePresent_data h4 {margin:23px 0 0; height:45px; line-height:43px; text-align:center; color:#333; font-size:16px; border-bottom:1px solid #555; border-top:2px solid #555; background:#efefef;}
+.statePresent_data ul {border-top:2px solid #43454b;}
+.statePresent_data ul li {border-bottom:1px solid #ddd;}
+.statePresent_data ul li button {padding:0 25px; width:100%; height:60px; line-height:48px; color:#333; text-align:right; font-size:16px;}
+.statePresent_data ul li:last-child {border-bottom:1px solid #aaa;}
+.statePresent_data ul li button span {float:left;}
+.statePresent_data ul li button b {display:inline-block; padding:0 40px 0 0; text-align:right; background:url(../company/img/icon_pop.png) no-repeat right 50%;}
+.statePresent_data ul li button span:before {content:'\ea04'; font-family:'xeicon'; display:inline-block; margin:0 10px 0 0; vertical-align:middle; width:35px; height:35px; line-height:35px; text-align:center; vertical-align:middle; font-size:22px; border-radius:50%; color:#fff; background: #6f45cd;}
+.statePresent_data ul li:nth-child(1) button span:before {content:'\ea04';}
+.statePresent_data ul li:nth-child(2) button span:before {content:'\e99d';}
+.statePresent_data ul li:nth-child(3) button span:before {content:'\e9bf';}
+
+.guideTxt2 {margin:20px 0 0 0; }
+.guideTxt2 p {padding:5px 0; white-space:nowrap; color:#333;}
+.guideTxt2 p i {margin:0 15px 0 0;}
+
+.main_mapArea {position:absolute;top: -15px;left: 0;display:block;width: 380px;height: 400px;}
+.main_mapArea map area {outline:none;}
+.map_count p {font-size:12px; color:#fff; cursor:pointer; font-family:'NGothicB';}
+.map_count .boxSet {color:#555;}
+.map_count p.On.boxSet {color:#731ef4;}
+.State02 {position:absolute; left:132px; top:109px;}
+.State031 {position:absolute; left:82px; top:83px;}
+.State032 {position:absolute; left:-6px; top:94px;}
+.State033 {position:absolute; left:158px; top:77px;}
+.State042 {position:absolute; left:81px; top:206px;}
+.State044 {position:absolute; left:149px; top:188px;}
+.State043 {position:absolute; left:148px; top:154px;}
+.State054 {position:absolute; left:195px; top:211px;}
+.State053 {position:absolute; left:224px; top:236px;}
+.State052 {position:absolute; left:270px; top:266px;}
+.State051 {position:absolute; left:241px; top:296px;}
+.State055 {position:absolute; left:156px; top:282px;}
+.State063 {position:absolute; left:91px; top:251px;}
+.State061 {position:absolute; left:75px; top:321px;}
+.State062 {position:absolute; left:35px; top:297px;}
+.State064 {position:absolute; left:135px; top:383px;}
+.State041 {position:absolute; left:74px; top:174px;}
+
+
+/* 기업활용 참여현황 - 유형별 탭 콘텐츠 */
+.typeCon {}
+.typeCon .sectionTab {float:left;width: calc(100% / 3);height:54px;line-height:54px;font-size:17px;text-align:center;color:#fff;border-left:1px solid #fff;background:#aeaeae;font-family:'NGothic';box-sizing:border-box;}
+.typeCon .sectionTab:first-child {border-left:none;width: calc(100% / 3);}
+.typeCon .sectionTab.On {color:#333; background:none;}
+.typeCon .sectionCon {position:absolute;top: 84px;left: 0;width: 100%;padding: 0 20px;}
+
+.sectionCon h5 {padding:0 0 0 45px; margin:0 0 10px 0; height:33px; line-height:33px; font-size:16px; color:#333; font-family:'NGothic'; background:url(../company/img/bulletVC.png) no-repeat 0 50%;}
+.sectionCon h5 b {display:inline-block; margin:-4px 0 0 10px; color:#7053d7; font-size:17px; vertical-align:middle;}
+.sectionCon ul {overflow:hidden;width: 100%;border-top:2px solid #40454b;}
+.sectionCon ul li {float:left;width: calc(100% / 6);height:75px;line-height:75px;padding:0 0 0 15px;font-size: 16px;color:#333;border-right:1px solid #c6c6c6;border-bottom:1px solid #c6c6c6;}
+.sectionCon ul li:nth-child(6n) {border-right:0;}
+.sectionCon ul li b {color:#7053d7; font-size: 17px; font-family:'NGothic';}
+.sectionCon ul li b:before {content:'\ea3e'; font-family:'xeicon'; margin:-2px 8px 0 10px; vertical-align:middle; font-size:16px; color:#ababab;}
+
+/* 기업활용 참여현황 - 업종별 탭 콘텐츠 */
+.jobCon_list {overflow:hidden;width: 100%;margin: 0 auto 0;/* border-top:2px solid #40454b; */}
+.jobCon_list li {float:left;width: calc(100% / 3);height: 50px;padding:0 20px;line-height:45px;color:#333;font-size:13px;/* border-right:1px solid #c6c6c6; */border-bottom:1px solid #c6c6c6;}
+.jobCon_list li:nth-child(3n-1) {border-right: 1px solid #c6c6c6;border-left: 1px solid #c6c6c6;}
+.jobCon_list li b {float:right; color:#7053d7; letter-spacing:-1px;}
+.jobCon_list li i {display:inline-block; margin:0 10px 0 0;}
+
+
+
+
+/* 분야별 훈련과정 설계환황 콘텐츠 */
+.col_width {width: 100%;}
+.recruit_today {border: 0;}
+.tit_circleSummary {height: 60px;line-height: 60px;text-indent: 20px;color:#fff;font-size:30px;background: #0e76bc;}
+.circle_summary {position:relative;padding:40px 30px;background: transparent;text-align:center;width: calc(100% - 100px);margin: auto;}
+.circle_summary .all_count {position:absolute;top: -47px;right:40px;display:inline-block;font-size:20px;color:#fff;text-align:right;}
+.circle_summary .all_count b {display:inline-block; margin:-6px 6px 0; font-size:35px; color:#fff568; vertical-align:middle; font-family:'NGothic';}
+.circle_summary .txt_guide {padding:15px 0 0; height:20px; line-height:20px; text-align:center; display:none; color:#333;}
+.circle_summary .txt_guide:before {content:'\e97b'; font-family:'xeicon'; margin:-2px 5px 0 0; padding:3px 0 0 3px; line-height:16px; vertical-align:middle; font-size:16px; overflow:hidden; display:inline-block; width:20px; height:20px; height:20px; border-radius:50px; color:#fff; background:#008ae7; box-sizing:border-box;}
+.circle_summary li .circle_box {position:relative; display:block; height:148px; margin:30px 10px 40px; padding:11px 0 30px; letter-spacing:-1px; font-size:16px;}
+.circle_summary li .circle_box span {/* display:block; *//* padding:0 13px 0 0; *//* width:131px; *//* height:96px; *//* text-align:center; *//* background:url(../education/img/bg_folderMain.png) no-repeat 50% 50%; */}
+.circle_summary li .circle_box span b {display:block;height:100%;width:100%;padding:32px 0 0;font-size:30px;/* color:#fff; */text-align:center;box-sizing:border-box;}
+.circle_summary li .circle_box i {position:absolute; bottom:0; left:-40px; width:201px; color:#333; font-size:16px; white-space:nowrap; letter-spacing:-1px;}
+
+.circle_summary .bx-wrapper .bx-prev {left:-50px; background:url(../education/img/controller02.png) no-repeat 0 0;}
+.circle_summary .bx-wrapper .bx-next {right:-50px; background:url(../education/img/controller02.png) no-repeat 0 -35px}
+.circle_summary .bx-wrapper .bx-controls-direction a {margin-top:-25px; width:22px; height:35px; color:#333; opacity:1 !important;}
+.circle_summary .bx-wrapper .bx-pager {position:relative; padding-top:0;}
+.circle_summary .bx-wrapper .bx-pager.bx-default-pager a {background:none; width:14px; height:14px; border:3px solid #949291; display:inline-block; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; transition:all .3s ease;}
+.circle_summary .bx-wrapper .bx-pager.bx-default-pager a.active {border-color:#33ccff; width:33px; background:#33ccff;}
+
+.circle_box > i::before {content:'';display:block;width:100%;height: 60px;background-size: 250px !important;background-position: center left 32px !important;}
+.icon01::before {background:url(../img/common/Icon01.png) no-repeat 28px 2px;}
+.icon02::before {background:url(../img/common/Icon02.png) no-repeat 28px 2px;}
+.icon03::before {background:url(../img/common/Icon03.png) no-repeat 28px 2px;}
+.icon04::before {background:url(../img/common/Icon04.png) no-repeat 28px 2px;}
+.icon05::before {background:url(../img/common/Icon05.png) no-repeat 28px 2px;}
+.icon06::before {background:url(../img/common/Icon06.png) no-repeat 28px 2px;}
+.icon07::before {background:url(../img/common/Icon07.png) no-repeat 28px 2px;}
+.icon08::before {background:url(../img/common/Icon08.png) no-repeat 28px 2px;}
+.icon09::before {background:url(../img/common/Icon09.png) no-repeat 28px 2px;}
+.icon10::before {background:url(../img/common/Icon10.png) no-repeat 28px 2px;}
+.icon11::before {background:url(../img/common/Icon11.png) no-repeat 28px 2px;}
+.icon12::before {background:url(../img/common/Icon12.png) no-repeat 28px 2px;}
+.icon13::before {background:url(../img/common/Icon13.png) no-repeat 28px 2px;}
+.icon14::before {background:url(../img/common/Icon14.png) no-repeat 28px 2px;}
+.icon15::before {background:url(../img/common/Icon15.png) no-repeat 28px 2px;}
+.icon16::before {background:url(../img/common/Icon16.png) no-repeat 28px 2px;}
+.icon17::before {background:url(../img/common/Icon17.png) no-repeat 28px 2px;}
+.icon18::before {background:url(../img/common/Icon18.png) no-repeat 28px 2px;}
+.icon19::before {background:url(../img/common/Icon19.png) no-repeat 28px 2px;}
+.icon20::before {background:url(../img/common/Icon20.png) no-repeat 28px 2px;}
+.icon21::before {background:url(../img/common/Icon21.png) no-repeat 28px 2px;}
+.icon22::before {background:url(../img/common/Icon22.png) no-repeat 28px 2px;}
+.icon23::before {background:url(../img/common/Icon23.png) no-repeat 28px 2px;}
+.icon24::before {background:url(../img/common/Icon24.png) no-repeat 28px 2px;}
+

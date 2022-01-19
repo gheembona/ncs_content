@@ -1,0 +1,1552 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<title id="mainTitle">NCS 통합메인</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Cache-control" content="No-Cache" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+
+    <link rel="stylesheet" type="text/css" href="web/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="web/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="web/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="web/css/layout-old.css" />
+    <link rel="stylesheet" type="text/css" href="web/css/size.css" />
+    <link rel="stylesheet" type="text/css" href="web/css/xeicon.css">
+
+    <script type="text/javascript" src="web/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="web/js/site.banner.js"></script>
+    <script type="text/javascript" src="web/js/common.js"></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="web/css/swiper-bundle.min.css"/>
+    <script src="web/js/swiper-bundle.min.js"></script>
+
+    <script>
+        function keywordTipBlind(){
+            if( $('#layerT_F_QueryMain').val().length > 0 ) $('.keyword-tip').hide();
+            else $('.keyword-tip').show();
+        }
+        $(function(){
+            $('#layerT_F_QueryMain').focusout(function() {
+                keywordTipBlind();
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div class="wrap">
+
+        <!-- ********************************************************** ncs-header // START -->
+        <div class="ncs-header">
+            <div class="ncs-header-top">
+                <div class="ncs-site-mn ncs-w-guide">
+                    <div class="ncs-header-top-left">
+                        <a href="" class="active">NCS통합</a>
+                        <a href="">블라인드채용</a>
+                        <a href="">기업활용</a>
+                        <a href="">교육훈련과정설계</a>
+                        <a href="">산업별역향체계(SQF)</a>
+                        <a href="">빅데이터활용</a>
+                        <a href="">NCS미디어센터</a>
+                    </div>
+                    <div class="ncs-header-top-right">
+                        <a href="">회원가입</a>
+                        <a href="" class="icon-lock btn-login">로그인</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ncs-header-srch">
+                <div class="ncs-site-srch ncs-w-guide">
+                    <div class="ncs-srch-bar">
+                        <div class="logo_main">
+                            <h1><a href="/blind/index.do">NCS 국가직무능력표준</a></h1>
+                        </div>
+                        <div class="ncs-srch-box">
+                            <input type="text" id="layerT_F_QueryMain" name="" title="검색바" value="" />
+                            <ul class="keyword-tip">
+                                <li>도면검토</li>
+                                <li>미용사</li>
+                                <li>기출문제</li>
+                            </ul>
+                            <button type="button"><span class="screen-out">검색</span></button>
+                        </div>
+                    </div>
+                    <div class="ncs-social-bar">
+                        <a href="" class="btn-social icon-naver"><span class="screen-out">네이버</span></a>
+                        <a href="" class="btn-social icon-kakao"><span class="screen-out">카카오스토리</span></a>
+                        <a href="" class="btn-social icon-facebook"><span class="screen-out">페이스북</span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="ncs-header-gnb">
+                <ul class="ncs-w-guide ncs-gnb-bar">
+                    <li><a href="">공정채용이란</a></li>
+                    <li><a href="">취업준비</a></li>
+                    <li><a href="">채용정보</a></li>
+                    <li><a href="">온라인학습</a></li>
+                    <li><a href="">자료실</a></li>
+                    <li><a href="">고객지원</a></li>
+                    <li class="report-mn"><a href="">면접신고센터</a></li>
+                    <li><a href="">채용심사위원신청</a></li>
+                </ul>
+            </div> -->
+
+            <div class="ncs-header-gnb top_menu">
+                <div class="top_depth2_bg"></div>
+                <ul class="ncs-w-guide ncs-gnb-bar topMMenu">
+                    <li menuid="MU00000549"><!-- ← 활성화된 메뉴에 class="On" 추가 -->
+                    <a href="/th01/TH-102-001-01.scdo">NCS란</a>
+                    <ul>
+                    <li><a href="/th01/TH-102-001-01.scdo">NCS소개</a></li>
+                    <li><a href="/th01/TH-102-002-01.scdo">학습모듈소개</a></li>
+                    <li><a href="/th02/TH0203List.do?dirSeq=115">NCS이러닝</a></li>
+                    <li><a href="/th02/TH0204List.do?dirSeq=117">홍보자료</a></li>
+                    <li><a href="/th06/bbs_lib_list.do?libDstinCd=16">언론보도 자료</a></li>
+                    </ul>
+                    </li>
+                    <li menuid="MU00000554"><!-- ← 활성화된 메뉴에 class="On" 추가 -->
+                    <a href="/unity/th03/ncsSearchMain.do">NCS 및 학습모듈검색</a>
+                    <ul>
+                    <li><a href="/unity/th03/ncsSearchMain.do">NCS 및 학습모듈 검색 </a></li>
+                    <li><a href="/unity/th03/ncsSearchMain15.do">이전 NCS및학습모듈('15년)</a></li>
+                    <li><a href="/unity/hth01/hth0103/highSchoolCourse.do">직업계고 교육과정</a></li>
+                    <li><a href="/th03/TH0302List.do?dirSeq=152">직업기초능력</a></li>
+                    <li><a href="/th06/bbs_lib_list.do?libDstinCd=20">구 사이트자료(구NCS)</a></li>
+                    <li><a href="/th06/bbs_lib_list.do?libDstinCd=21">구 사이트자료(구모듈교재)</a></li>
+                    </ul>
+                    </li>
+                    <li menuid="MU00000671"><!-- ← 활성화된 메뉴에 class="On" 추가 -->
+                    <a href="/th04/carrDevelPath.do">경력개발</a>
+                    <ul>
+                    <li><a href="/th04/carrDevelPath.do">경력개발경로 찾기</a></li>
+                    <li><a href="/th04/dutyCompeDgn.do">직무능력진단</a></li>
+                    </ul>
+                    </li>
+                    <li menuid="MU00000672"><!-- ← 활성화된 메뉴에 class="On" 추가 -->
+                    <a href="/th05/ncsWikiList.do">위키</a>
+                    <ul>
+                    <li><a href="/th05/ncsWikiList.do">NCS위키</a></li>
+                    <li><a href="/th05/bbs_edu_list.do">학습모듈위키</a></li>
+                    <li><a href="/th06/bbs_lib_list.do?libDstinCd=61">NCS 포럼 및 간담회</a></li>
+                    </ul>
+                    </li>
+                    <li menuid="MU00000673"><!-- ← 활성화된 메뉴에 class="On" 추가 -->
+                    <a href="/th06/bbs_lib_list.do?libDstinCd=01">자료실</a>
+                    <ul>
+                    <li><a href="/th06/bbs_lib_list.do?libDstinCd=01">일반자료실</a></li>
+                    <li><a href="/th06/bbs_lib_list.do?libDstinCd=02">NCS 동향</a></li>
+                    <li><a href="/th06/bbs_lib_list.do?libDstinCd=46">NCS 사전공지</a></li>
+                    <li><a href="/th06/bbs_lib_list.do?libDstinCd=47">NCS 자료실</a></li>
+                    <li><a href="/th06/bbs_lib_list.do?libDstinCd=18">학습모듈(안) 자료실</a></li>
+                    <li><a href="/th06/bbs_lib_list.do?libDstinCd=51">NCS청년기자단</a></li>
+                    </ul>
+                    </li>
+                    <li menuid="MU00000674"><!-- ← 활성화된 메뉴에 class="On" 추가 -->
+                    <a href="/th07/bbs_ntc_list.do">Q&amp;A 센터</a>
+                    <ul>
+                    <li><a href="/th07/bbs_ntc_list.do">공지사항</a></li>
+                    <li><a href="/th07/qna_faq.do">FAQ</a></li>
+                    <li><a href="http://www.hrdkorea.or.kr/2/2/2/1" target="_blank">고객참여</a></li>
+                    <li><a href="/th06/TH-107-004-01.scdo">사이트활용가이드</a></li>
+                    <li><a href="/th14/selectSurveylist.do">온라인 설문참여</a></li>
+                    </ul>
+                    </li>
+                    <li>
+                        <a href="">빅데이터</a>
+                    </li>
+                    <li>
+                        <a href="">미디어센터</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- ********************************************************** ncs-header // END  -->
+
+
+        <div class="ncs-content integrated-main">
+            
+
+
+
+            <script type="text/javascript">
+                //<![CDATA[
+                $(function(){
+                    $('[id^="id_tabContBox"]').hide();
+                    
+                    tabCont(1);
+                    toptabCont(1);
+                });
+                
+                function tabCont(key){
+                    $('[data-tab]').removeClass('active');
+                    $('[data-tab='+ key +']').addClass('active');
+                    
+                    $('[data-tab-index]').hide();
+                    $('[data-tab-index="'+key+'"]').show();
+
+                    if( key != 1 ) {
+                        $('[data-top-nav="keyword"]').show();
+                        $('[data-top-nav="button"]').hide();
+                    }else {
+                        $('[data-top-nav="button"]').show();
+                        $('[data-top-nav="keyword"]').hide();
+                    } 
+                }
+
+                function toptabCont(key){
+                    $('[data-top-tab]').removeClass('active');
+                    $('[data-top-tab='+ key +']').addClass('active');
+                    
+                    $('[data-toptab-index]').hide();
+                    $('[data-toptab-index="'+key+'"]').show();
+                }
+                //]]>
+                </script>
+            <!-- ********************************************************** section 01 // START -->
+            <section class="ncs-content-sect main-sect-01">
+                <div class="sect-guide sect-01-post">
+
+                    <p class="sect-guide-subtit">NCS 및 학습모듈과 정보를 한눈에 검색하세요</p>
+                    <h2 class="sect-guide-tit">NCS 검색창</h2>
+
+                    <div class="ncssrch-wrap">
+                        <div data-top-nav="button">
+                            <div class="ncssrch-top-btnbox">
+                                <button type="button" data-top-tab="1" class="active" onclick="toptabCont(1);">분야별검색</button>
+                                <button type="button" data-top-tab="2" onclick="toptabCont(2);">키워드검색</button>
+                                <button type="button" data-top-tab="3" onclick="toptabCont(3);">코드검색</button>
+                                <button type="button" data-top-tab="4" onclick="">NCS 분류보기</button>
+                            </div>
+                        </div>
+                        <div data-top-nav="keyword">
+                            <div class="ncssrch-top-btnbox">
+                                <div class="ta_c">
+                                    <input id="searchJobKeyword" name="searchJobKeyword" title="검색어 입력" type="text" value="">
+                                    <a href="javascript:fn_onSch();" class="sch_job_btn" title="검색">
+                                        검색하기
+                                    </a>
+                                </div> 
+                            </div>
+                        </div>
+
+                        <div class="ncssrch-left-btnbox">
+                            <button type="button" data-tab="1" class="active" onclick="tabCont(1);">NCS 및 학습모듈 검색</button>
+                            <button type="button" data-tab="2" onclick="tabCont(2);">직업정보검색</button>
+                            <button type="button" data-tab="3" onclick="">경력개발경로</button>
+                        </div>
+
+                        <div data-tab-index="1">
+                            <div data-toptab-index="1">
+                                <ul class="ncs-srch-field1">
+                                    <li class="icon01">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>01. 사업관리</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon02">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>02. 경영·회계·사무</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon03">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>03. 금융·보험</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon04">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>04. 교육·자연·사회과학</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon05">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>05. 법률·경찰·소방·교도·국방</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon06">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>06. 보건·의료</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon07">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>07. 사회복지·종교</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon08">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>08. 문화·예술·디자인·방송</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon09">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>09. 운전·운송</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon10">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>10. 영업판매</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon11">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>11. 경비·청소</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon12">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>12. 이용·숙박·여행·오락·스포츠</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon13">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>13. 음식서비스</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon14">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>14. 건설</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon15">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>15. 기계</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon16">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>16. 재료</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon17">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>17. 화학·바이오</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon18">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>18. 섬유·의복</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon19">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>19. 전기·전자</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon20">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>20. 정보통신</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon21">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>21. 식품가공</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon22">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>22. 인쇄·목재·가구·공예</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon23">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>23. 환경·에너지·안전</span>
+                                        </button>
+                                    </li>
+                                    <li class="icon24">
+                                        <button type="button" onclick="" class="btn-field-icon">
+                                            <span>24. 농림어업</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div data-toptab-index="2">
+                                <div class="ncsSearch_keyword position_wrap tabContent_2D1" id="tabCon12" style="display: block;">
+                                    <table class="table_write02" summary="키워드 검색을 위한 검색범위, 개발연도, 키워드 정보 입력">
+                                        <caption>키워드 검색을 위한 정보입력표</caption>
+                                        <colgroup>
+                                            <col width="100px">
+                                            <col width="auto">
+                                            <col width="100px">
+                                            <col width="auto">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>
+                                                    <label for="searchCondition">
+                                                        검색범위
+                                                    </label>
+                                                </th>
+                                                <td>
+                                                    <select name="searchCondition" id="searchCondition" class="w300">
+                                                        <option value="">
+                                                            전체
+                                                        </option>
+                                                        <option value="clsNm">
+                                                            분류명칭
+                                                        </option>
+                                                        <option value="compeNm">
+                                                            능력단위명칭
+                                                        </option>
+                                                        <option value="factrNm">
+                                                            능력단위요소명칭
+                                                        </option>
+                                                    </select>
+                                                </td>
+                                                <th>
+                                                    개발연도
+                                                </th>
+                                                <td>
+                                                    <input type="text" name="keywordSearchSyear" id="keywordSearchSday" placeholder="시작일 선택" class="w160 hasDatepicker" title="시작일선택" readonly="readonly">
+                                                    <input type="text" name="keywordSearchEyear" id="keywordSearchEday" placeholder="종료일 선택" class="w160 hasDatepicker" title="종료일선택" readonly="readonly">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <label for="searchKeyword">
+                                                        키워드
+                                                    </label>
+                                                </th>
+                                                <td colspan="3">
+                                                    <input type="text" name="searchKeyword" id="searchKeyword" placeholder="키워드 입력" class="w800">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="tva_t pt20">
+                                                    대분류선택
+                                                </th>
+                                                <td colspan="3">
+                                                    <ul class="form_fieldList">
+                                                        <li>
+                                                            <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_no" checked="checked">
+                                                            <label for="rad_keywordSearchLclasCd_no">
+                                                                선택없음
+                                                            </label>
+                                                        </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_01" chkval="01">
+                                                                <label for="rad_keywordSearchLclasCd_01">
+                                                                    01. 사업관리
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_02" chkval="02">
+                                                                <label for="rad_keywordSearchLclasCd_02">
+                                                                    02. 경영·회계·사무
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_03" chkval="03">
+                                                                <label for="rad_keywordSearchLclasCd_03">
+                                                                    03. 금융·보험
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_04" chkval="04">
+                                                                <label for="rad_keywordSearchLclasCd_04">
+                                                                    04. 교육·자연·사회과학
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_05" chkval="05">
+                                                                <label for="rad_keywordSearchLclasCd_05">
+                                                                    05. 법률·경찰·소방·교도·국방
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_06" chkval="06">
+                                                                <label for="rad_keywordSearchLclasCd_06">
+                                                                    06. 보건·의료
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_07" chkval="07">
+                                                                <label for="rad_keywordSearchLclasCd_07">
+                                                                    07. 사회복지·종교
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_08" chkval="08">
+                                                                <label for="rad_keywordSearchLclasCd_08">
+                                                                    08. 문화·예술·디자인·방송
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_09" chkval="09">
+                                                                <label for="rad_keywordSearchLclasCd_09">
+                                                                    09. 운전·운송
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_10" chkval="10">
+                                                                <label for="rad_keywordSearchLclasCd_10">
+                                                                    10. 영업판매
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_11" chkval="11">
+                                                                <label for="rad_keywordSearchLclasCd_11">
+                                                                    11. 경비·청소
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_12" chkval="12">
+                                                                <label for="rad_keywordSearchLclasCd_12">
+                                                                    12. 이용·숙박·여행·오락·스포츠
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_13" chkval="13">
+                                                                <label for="rad_keywordSearchLclasCd_13">
+                                                                    13. 음식서비스
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_14" chkval="14">
+                                                                <label for="rad_keywordSearchLclasCd_14">
+                                                                    14. 건설
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_15" chkval="15">
+                                                                <label for="rad_keywordSearchLclasCd_15">
+                                                                    15. 기계
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_16" chkval="16">
+                                                                <label for="rad_keywordSearchLclasCd_16">
+                                                                    16. 재료
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_17" chkval="17">
+                                                                <label for="rad_keywordSearchLclasCd_17">
+                                                                    17. 화학·바이오
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_18" chkval="18">
+                                                                <label for="rad_keywordSearchLclasCd_18">
+                                                                    18. 섬유·의복
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_19" chkval="19">
+                                                                <label for="rad_keywordSearchLclasCd_19">
+                                                                    19. 전기·전자
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_20" chkval="20">
+                                                                <label for="rad_keywordSearchLclasCd_20">
+                                                                    20. 정보통신
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_21" chkval="21">
+                                                                <label for="rad_keywordSearchLclasCd_21">
+                                                                    21. 식품가공
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_22" chkval="22">
+                                                                <label for="rad_keywordSearchLclasCd_22">
+                                                                    22. 인쇄·목재·가구·공예
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_23" chkval="23">
+                                                                <label for="rad_keywordSearchLclasCd_23">
+                                                                    23. 환경·에너지·안전
+                                                                </label>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <input type="radio" name="keywordSearchLclasCd" id="rad_keywordSearchLclasCd_24" chkval="24">
+                                                                <label for="rad_keywordSearchLclasCd_24">
+                                                                    24. 농림어업
+                                                                </label>
+                                                            </li>
+                                                                                
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>                
+                                    <!-- ▽ 검색 및 초기화 버튼 -->
+                                    <div class="btnArea Acenter">
+                                        <button class="btn_base btn_large btn_Gray w130" onclick="javascript:fn_initSearchKeyword();">
+                                            
+                                            초기화
+                                        </button>
+                                        <button class="btn_base btn_large btn_Blue w130" onclick="javascript:fn_searchKeyword();">
+                                            
+                                            검 색
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-toptab-index="3">
+                                <div class="ncsSearch_code position_wrap tabContent_2D1" id="tabCon13" style="display: block;">
+                                    <ul class="input_code mt80">
+                                        <li>
+                                            <label for="ncsLclasCd">
+                                                대분류 코드
+                                            </label>
+                                            <input type="tel" name="ncsLclasCd" id="ncsLclasCd" placeholder="2자리" maxlength="2" onkeydown="return isNumberKey(event);">
+                                        </li>
+                                        <li>
+                                            <label for="ncsMclasCd">
+                                                중분류 코드
+                                            </label>
+                                            <input type="tel" name="ncsMclasCd" id="ncsMclasCd" placeholder="2자리" maxlength="2" onkeydown="return isNumberKey(event);">
+                                        </li>
+                                        <li>
+                                            <label for="ncsSclasCd">
+                                                소분류 코드
+                                            </label>
+                                            <input type="tel" name="ncsSclasCd" id="ncsSclasCd" placeholder="2자리" maxlength="2" onkeydown="return isNumberKey(event);">
+                                        </li>
+                                        <li>
+                                            <label for="ncsSubdCd">
+                                                세분류 코드
+                                            </label>
+                                            <input type="tel" name="ncsSubdCd" id="ncsSubdCd" placeholder="2자리" maxlength="2" onkeydown="return isNumberKey(event);">
+                                        </li>
+                                        <li>
+                                            <label for="ncsCompeUnitCd">
+                                                능력단위 코드
+                                            </label>
+                                            <input type="tel" name="ncsCompeUnitCd" id="ncsCompeUnitCd" placeholder="2자리" maxlength="2" onkeydown="return isNumberKey(event);">
+                                        </li>
+                                    </ul>                
+                                    <!-- ▽ 검색 및 초기화 버튼 -->
+                                    <div class="btnArea Acenter">
+                                        <button class="btn_base btn_large btn_Gray w130" onclick="javascript:fn_initSearchCode();">
+                                            
+                                            초기화
+                                        </button>
+                                        <button class="btn_base btn_large btn_Blue w130" onclick="javascript:fn_searchCode();">
+                                            
+                                            검 색
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div data-tab-index="2">
+                            <div class="position_wrap02 Step_area tabContent_3D1" id="tabCon31" style="display: block;">
+                                           	
+                                <!-- ▽ 분야별검색 중분류 이하 : 대분류 선택 후 아래 중분류 이하 선택 영역 보여요 -->
+                                <div class="ncsSearch_field2">
+                                    <div class="ncsSearch_section_job">
+                                        <h6>
+                                            대분류
+                                        </h6>
+                                        <input type="hidden" id="inputLclas" value="">
+                                        <ol id="ol_lClas_job" style="display: block;"><li><button ncslclascd="01" onclick="javascript:fn_JobInfoFindMclas(this);">01. 사업관리(6)</button></li><li><button ncslclascd="02" onclick="javascript:fn_JobInfoFindMclas(this);">02. 경영·회계·사무(25)</button></li><li><button ncslclascd="03" onclick="javascript:fn_JobInfoFindMclas(this);">03. 금융·보험(12)</button></li><li><button ncslclascd="04" onclick="javascript:fn_JobInfoFindMclas(this);">04. 교육·자연·사회과학(17)</button></li><li><button ncslclascd="05" onclick="javascript:fn_JobInfoFindMclas(this);">05. 법률·경찰·소방·교도·국방(15)</button></li><li><button ncslclascd="06" onclick="javascript:fn_JobInfoFindMclas(this);">06. 보건·의료(24)</button></li><li><button ncslclascd="07" onclick="javascript:fn_JobInfoFindMclas(this);">07. 사회복지·종교(11)</button></li><li><button ncslclascd="08" onclick="javascript:fn_JobInfoFindMclas(this);">08. 문화·예술·디자인·방송(34)</button></li><li><button ncslclascd="09" onclick="javascript:fn_JobInfoFindMclas(this);">09. 운전·운송(18)</button></li><li><button ncslclascd="10" onclick="javascript:fn_JobInfoFindMclas(this);">10. 영업판매(19)</button></li><li><button ncslclascd="11" onclick="javascript:fn_JobInfoFindMclas(this);">11. 경비·청소(9)</button></li><li><button ncslclascd="12" onclick="javascript:fn_JobInfoFindMclas(this);">12. 이용·숙박·여행·오락·스포츠(22)</button></li><li><button ncslclascd="13" onclick="javascript:fn_JobInfoFindMclas(this);">13. 음식서비스(9)</button></li><li><button ncslclascd="14" onclick="javascript:fn_JobInfoFindMclas(this);">14. 건설(42)</button></li><li><button ncslclascd="15" onclick="javascript:fn_JobInfoFindMclas(this);">15. 기계(50)</button></li><li><button ncslclascd="16" onclick="javascript:fn_JobInfoFindMclas(this);">16. 재료(23)</button></li><li><button ncslclascd="17" onclick="javascript:fn_JobInfoFindMclas(this);">17. 화학·바이오(9)</button></li><li><button ncslclascd="18" onclick="javascript:fn_JobInfoFindMclas(this);">18. 섬유·의복(20)</button></li><li><button ncslclascd="19" onclick="javascript:fn_JobInfoFindMclas(this);">19. 전기·전자(34)</button></li><li><button ncslclascd="20" onclick="javascript:fn_JobInfoFindMclas(this);">20. 정보통신(23)</button></li><li><button ncslclascd="21" onclick="javascript:fn_JobInfoFindMclas(this);">21. 식품가공(13)</button></li><li><button ncslclascd="22" onclick="javascript:fn_JobInfoFindMclas(this);">22. 인쇄·목재·가구·공예(16)</button></li><li><button ncslclascd="23" onclick="javascript:fn_JobInfoFindMclas(this);">23. 환경·에너지·안전(19)</button></li><li><button ncslclascd="24" onclick="javascript:fn_JobInfoFindMclas(this);">24. 농림어업(28)</button></li></ol>                        
+                                    </div>
+                                    <div class="ncsSearch_section_job">
+                                        <h6>
+                                            중분류
+                                        </h6>
+                                        <input type="hidden" id="inputMclas" value="">
+                                        <ol id="ol_mClas_job"></ol>
+                                    </div>
+                                    <div class="ncsSearch_section_job">
+                                        <h6>
+                                            소분류
+                                        </h6>
+                                        <input type="hidden" id="inputSclas" value="">
+                                        <ol id="ol_sClas_job"></ol>                       
+                                    </div>
+                                    <div class="ncsSearch_section_job view_setn">
+                                        <h6>
+                                            세분류
+                                        </h6>
+                                        <input type="hidden" id="inputSubd" value="">
+                                        <ol id="ol_subd_job"></ol>                       
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="sch_count">
+                                        총 
+                                        <span id="sch_result_cnt_job">338</span>
+                                        개의 검색 결과가 있습니다.
+                                        </div>
+                                    <div class="sch_Rbox">
+                                        <div id="sch_result_job">
+                                            <ul id="ul_job_list" style="display: block;"><li><a jobcd="8831" href="javascript:fn_JobInfoFindLink('8831');">가구 제조·수리원</a></li><li><a jobcd="8832" href="javascript:fn_JobInfoFindLink('8832');">가구 조립원</a></li><li><a jobcd="5616" href="javascript:fn_JobInfoFindLink('5616');">가사 도우미</a></li><li><a jobcd="4146" href="javascript:fn_JobInfoFindLink('4146');">가수 및 성악가</a></li><li><a jobcd="1551" href="javascript:fn_JobInfoFindLink('1551');">가스·에너지공학 기술자 및 연구원</a></li><li><a jobcd="8322" href="javascript:fn_JobInfoFindLink('8322');">가전제품 설치·수리원</a></li><li><a jobcd="9022" href="javascript:fn_JobInfoFindLink('9022');">가축 사육 종사원</a></li><li><a jobcd="8852" href="javascript:fn_JobInfoFindLink('8852');">간판 제작·설치원</a></li><li><a jobcd="3040" href="javascript:fn_JobInfoFindLink('3040');">간호사</a></li><li><a jobcd="3075" href="javascript:fn_JobInfoFindLink('3075');">간호조무사</a></li><li><a jobcd="4161" href="javascript:fn_JobInfoFindLink('4161');">감독 및 기술감독</a></li><li><a jobcd="0264" href="javascript:fn_JobInfoFindLink('0264');">감사 사무원</a></li><li><a jobcd="0234" href="javascript:fn_JobInfoFindLink('0234');">감정 전문가</a></li><li><a jobcd="7011" href="javascript:fn_JobInfoFindLink('7011');">강구조물 가공원 및 건립원</a></li><li><a jobcd="7031" href="javascript:fn_JobInfoFindLink('7031');">건설 배관공</a></li><li><a jobcd="8116" href="javascript:fn_JobInfoFindLink('8116');">건설·광업 기계 설치·정비원</a></li><li><a jobcd="7040" href="javascript:fn_JobInfoFindLink('7040');">건설·채굴 기계 운전원</a></li><li><a jobcd="7026" href="javascript:fn_JobInfoFindLink('7026');">건축 도장공</a></li><li><a jobcd="7016" href="javascript:fn_JobInfoFindLink('7016');">건축 목공</a></li><li><a jobcd="7015" href="javascript:fn_JobInfoFindLink('7015');">건축 석공</a></li><li><a jobcd="1401" href="javascript:fn_JobInfoFindLink('1401');">건축가</a></li><li><a jobcd="1402" href="javascript:fn_JobInfoFindLink('1402');">건축공학 기술자</a></li><li><a jobcd="5121" href="javascript:fn_JobInfoFindLink('5121');">결혼상담원 및 웨딩플래너</a></li><li><a jobcd="4203" href="javascript:fn_JobInfoFindLink('4203');">경기 심판 및 경기 기록원</a></li></ul>
+                                            <input type="hidden" id="jobFindPageIndex" value="1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+
+
+
+                </div>
+            </section>
+            <!-- ********************************************************** section 01 // END -->
+
+            <!-- ********************************************************** section 02 // START -->
+            <section class="ncs-content-sect main-sect-02">
+                <div class="sect-guide sect-02-post">
+                    
+                    
+                    <div class="quickmenu-area" style="padding:60px 0;">
+                        <p class="sect-guide-subtit">NCS의 주요메뉴를 확인해주세요</p>
+                        <h2 class="sect-guide-tit">주요 메뉴</h2>
+                        <!-- 주요 메뉴 --> 
+                        <div class="quickmenu-box" style="position: relative;">
+                            <div class="major-area">
+                                <!-- 주요 메뉴 -->
+                                <div class="major-box">
+                                    
+                                    <div class="major-card">
+                                        <span class="icon-major-01"></span>
+                                        <span class="major-label">NCS</span>
+                                        <ul>
+                                            <li>NCS소개</li>
+                                            <li>학습모듈소개</li>
+                                            <li>직업기초능력</li>
+                                            <li>경력개발포트폴리오</li>
+                                            <li>빅데이터</li>
+                                        </ul>
+                                    </div>
+                                    <div class="major-card">
+                                        <span class="icon-major-02"></span>
+                                        <span class="major-label">기업활용</span>
+                                        <ul>
+                                            <li>컨설팅 사업소개</li>
+                                            <li>컨설팅 프로세스</li>
+                                            <li>컨설팅 신청</li>
+                                            <li>기업활용 우수사례</li>
+                                        </ul>
+                                    </div>
+                                    <div class="major-card">
+                                        <span class="icon-major-03"></span>
+                                        <span class="major-label">교육훈련과정설계</span>
+                                        <ul>
+                                            <li class="point-txt">훈련과정설계 소개</li>
+                                            <li>교육과정설계 소개</li>
+                                            <li>훈련과정 설계</li>
+                                            <li>교육과정 설계</li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                                <!-- //주요 메뉴 -->
+                            </div>
+                            
+                            
+                            <!-- 배너 -->
+                            <div class="swiper mySwiper" style="position: absolute;right: 0;top:-60px;">
+
+                                <div class="swiper-wrapper banner-area" id="mainTopbanner">
+                                    <div class="swiper-slide banner-box">
+                                        <img src="web/img/banner.png" alt="배너" />
+                                    </div>
+                                    <div class="swiper-slide banner-box">
+                                        
+                                        <img src="web/img/banner.png" alt="배너" />
+                                    </div>
+                                    <div class="swiper-slide banner-box">
+                                        
+                                        <img src="web/img/banner.png" alt="배너" />
+                                    </div>
+                                    <div class="swiper-slide banner-box">
+                                        
+                                        <img src="web/img/banner.png" alt="배너" />
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <script type="text/javascript">
+                                var swiper = new Swiper(".mySwiper", {
+                                    pagination: {
+                                        el: ".swiper-pagination",
+                                        clickable: true,
+                                        renderBullet: function (index, className) {
+                                        return '<span class="' + className + '">' + (index + 1) + "</span>";
+                                        }
+                                    },
+                                });
+                            </script>
+                            <!-- //배너 -->
+
+                        </div>
+                        <!-- //주요 메뉴 -->
+                </div>
+            </section>
+            <!-- ********************************************************** section 02 // END -->
+
+            <!-- ********************************************************** section 03 // START -->
+            <section class="ncs-content-sect main-sect-03">
+                <div class="sect-guide sect-03-post">
+                    <p class="sect-guide-subtit">실제 현황 빅데이터를 확인해주세요</p>
+                    <h2 class="sect-guide-tit">주요 빅데이터</h2>
+                    <div class="chart-wrap">
+                        <ul>
+                            <li>능력단위 활용추이</li>
+                            <li>기업활용 참여현황</li>
+                            <li class="active">분야별 훈련과정 설계현황</li>
+                        </ul>
+                        <div class="chart-right">
+                            <p>기업활용 참여현황 <span>(컨설팅 참여기업 450)</span></p>
+                            <div class="chart-area" style="display: none;">
+                                <!-- 능력단위 활용추이 영역 -->
+                                <div id="chartArea"></div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ******************************************************************************************************** 주요 빅데이터 > 기업활용 참여현황 START -->
+<div class="chart-area cont2"  style="display: none;">
+<link rel="stylesheet" type="text/css" href="web/css/bigdataCont.css" />
+<link rel="stylesheet" type="text/css" href="web/css/xeicon.css" />
+<script type="text/javascript" src="web/js/gfn_ajax.js"></script>
+<div class="col_width present">
+    <!-- ▼ 컨설팅 참여현황 영역 -->
+    <div class="present_box">
+        
+        <!-- ▼ 지역별 컨설팅 참여현황 영역 -->
+        <h3 class="btn_present tabBtn_1D1 On" rel="tabCon1" style="cursor: pointer;"><button class="tabindex"><span>지역별</span></button></h3><!-- ← NCS학습모듈검색 텝메뉴-->
+        <div class="stateCon con_present tabContent_1D1" id="tabCon1" style="display: block;"><!-- ← NCS학습모듈검색 콘텐츠-->                    
+            <!-- ▽ 지역별 선택 지도 영역 -->
+            <div class="main_mapArea">
+                <img src="/web/company/img/presentMap02.png?1642120517345" id="changeMap" usemap="#MapLink" alt="지역선택을 위한 전국 지도">
+                <map name="MapLink">
+                    <area shape="poly" rel="02" alt="서울" coords="133,110,157,99,173,103,231,101,230,123,165,124,147,126,139,119" href="javascript:fn_schArea('02','70');">
+                    <area shape="poly" rel="031" alt="경기" coords="154,57,129,64,114,84,109,94,111,110,124,105,129,110,130,116,126,124,136,134,127,141,146,162,160,157,169,162,190,148,199,127,147,129,133,116,132,107,155,97,168,99,185,99,189,90,191,84" href="javascript:fn_schArea('10','107');">
+                    <area shape="poly" rel="032" alt="인천" coords="104,114,91,109,25,108,25,87,89,86,103,90,108,110,112,114,121,108,127,113,123,124,128,129,124,137,116,135,109,127,97,136,88,131,105,118" href="javascript:fn_schArea('05','25');">
+                    <area shape="poly" rel="033" alt="강원" coords="145,57,153,55,193,83,187,99,233,99,232,125,202,127,198,142,202,147,208,143,211,136,217,142,226,139,254,152,286,153,296,145,278,108,250,71,233,29,222,40,195,44,191,39,178,38,140,53" href="javascript:fn_schArea('11','15');">
+                    <area shape="poly" rel="042" alt="대전" coords="184,202,195,202,190,219,176,221,112,221,112,199,177,199,177,204" href="javascript:fn_schArea('07','19');">
+                    <area shape="poly" rel="044" alt="세종" coords="183,201,179,203,179,198,169,198,166,188,166,184,173,180,182,188,183,180,248,180,248,202,186,202" href="javascript:fn_schArea('09','4');">
+                    <area shape="poly" rel="043" alt="충북" coords="169,164,196,145,202,149,211,139,217,144,227,141,252,154,238,171,232,173,218,174,217,179,183,179,180,184,196,203,206,203,206,208,217,213,212,229,207,232,192,230,190,221,197,206,178,184,174,181,178,176" href="javascript:fn_schArea('12','29');">
+                    <area shape="poly" rel="054" alt="경북" coords="207,242,207,234,214,230,219,213,208,207,208,203,249,203,248,179,219,179,218,176,238,173,254,154,287,154,298,147,305,179,302,202,299,210,303,228,256,227,256,234,251,232,233,238,231,257,215,244" href="javascript:fn_schArea('16','19');">
+                    <area shape="poly" rel="053" alt="대구" coords="228,259,233,257,235,239,252,233,258,236,258,229,322,229,322,251,256,249,249,258,242,266,230,267" href="javascript:fn_schArea('04','8');">
+                    <area shape="poly" rel="052" alt="울산" coords="286,251,275,251,273,278,293,288,301,288,303,281,369,281,369,259,306,258,306,252" href="javascript:fn_schArea('08','4');">
+                    <area shape="poly" rel="051" alt="부산" coords="290,288,273,280,257,287,252,301,264,307,274,306,274,310,340,311,340,288" href="javascript:fn_schArea('03','21');">
+                    <area shape="poly" rel="055" alt="경남" coords="247,263,272,262,272,278,256,286,251,301,263,308,260,311,252,308,245,308,241,330,228,320,199,316,186,290,191,274,186,268,203,242,225,261,230,269" href="javascript:fn_schArea('17','38');">
+                    <area shape="poly" rel="063" alt="전북" coords="185,284,190,275,182,268,205,239,205,233,194,232,179,238,168,229,158,232,145,229,125,237,127,248,116,276,122,285,137,274,152,274,156,285" href="javascript:fn_schArea('14','23');">
+                    <area shape="poly" rel="061" alt="전남" coords="129,288,111,288,114,279,120,285,129,282,139,276,150,275,155,286,185,287,196,314,187,326,177,326,150,340,150,350,143,355,135,352,121,363,115,360,113,346,101,337,111,328,110,312,132,313,140,315,154,309,158,296,149,289" href="javascript:fn_schArea('15','9');">
+                    <area shape="poly" rel="062" alt="광주" coords="65,289,148,290,156,297,153,307,140,313,67,311" href="javascript:fn_schArea('06','26');">
+                    <area shape="poly" rel="064" alt="제주" coords="109,394,119,382,154,375,233,375,233,397,167,398,162,389,140,402,113,402" href="javascript:fn_schArea('18','6');">
+                    <area shape="poly" rel="041" alt="충남" coords="183,220,186,231,175,237,164,228,154,230,141,228,126,234,118,222,119,197,112,193,113,186,103,185,91,173,117,156,135,168,156,160,170,176,166,180,159,182,159,190,163,198,121,198,120,222" href="javascript:fn_schArea('13','27');">
+                    
+                </map>
+                <div class="map_count">
+                    <p class="State02 boxSet On" rel="02" alt="서울">서울 70</p>
+                    <p class="State031" rel="031" alt="경기">경기 107</p>
+                    <p class="State032 boxSet" rel="032" alt="인천">인천 25</p>
+                    <p class="State033" rel="033" alt="강원">강원 15</p>
+                    <p class="State042 boxSet" rel="042" alt="대전">대전 19</p>
+                    <p class="State044 boxSet" rel="044" alt="세종">세종 4</p>
+                    <p class="State043" rel="043" alt="충북">충북 29</p>
+                    <p class="State054" rel="054" alt="경북">경북 19</p>
+                    <p class="State053 boxSet" rel="053" alt="대구">대구 8</p>
+                    <p class="State052 boxSet" rel="052" alt="울산">울산 4</p>
+                    <p class="State051 boxSet" rel="051" alt="부산">부산 21</p>
+                    <p class="State055" rel="055" alt="경남">경남 38</p>
+                    <p class="State063" rel="063" alt="전북">전북 23</p>
+                    <p class="State061" rel="061" alt="전남">전남 9</p>
+                    <p class="State062 boxSet" rel="062" alt="광주">광주 26</p>
+                    <p class="State064 boxSet" rel="064" alt="제주">제주 6</p>
+                    <p class="State041" rel="041" alt="충남">충남 27</p>
+                </div>
+            </div>
+            
+            <!-- ▽ 유형별 참여기업표 영역 -->
+            <div class="statePresent_data">
+                <h3><b>서울</b> 컨설팅 참여기업 <span>70</span></h3>
+                <ul>
+                    <!-- <li><button onclick="location.href='layerPop_company_present'" class="OpenPop" rel="layerPop_company_present" title="기업목록보기"><span>채용</span><b>15</b></button></li>
+                    <li><button onclick="location.href='layerPop_company_present'" class="OpenPop" rel="layerPop_company_present" title="기업목록보기"><span>재직자훈련</span><b>10</b></button></li>
+                    <li><button onclick="location.href='layerPop_company_present'" class="OpenPop" rel="layerPop_company_present" title="기업목록보기"><span>배치·승진</span><b>10</b></button></li>
+                    <li><button onclick="location.href='layerPop_company_present'" class="OpenPop" rel="layerPop_company_present" title="기업목록보기"><span>임금(직무급 도입)</span><b>10</b></button></li>
+                    <li><button onclick="location.href='layerPop_company_present'" class="OpenPop" rel="layerPop_company_present" title="기업목록보기"><span>종합활용 1,2</span><b>10</b></button></li> -->
+                    
+                    
+                    
+                    
+                    
+                <li id="areali_0"><input type="hidden" id="areaCd_0" value="02"><input type="hidden" id="typeCd_0" value="05"><input type="hidden" id="typeCdNm_0" value="기본형"><input type="hidden" id="coCnt_0" value="5"><button rel="" class="OpenPopspan" title="" style="cursor:default"><span>기본형</span><b>5</b></button></li><li id="areali_1"><input type="hidden" id="areaCd_1" value="02"><input type="hidden" id="typeCd_1" value="06"><input type="hidden" id="typeCdNm_1" value="확장형"><input type="hidden" id="coCnt_1" value="23"><button rel="" class="OpenPopspan" title="" style="cursor:default"><span>확장형</span><b>23</b></button></li><li id="areali_2"><input type="hidden" id="areaCd_2" value="02"><input type="hidden" id="typeCd_2" value="07"><input type="hidden" id="typeCdNm_2" value="기본형+확장형"><input type="hidden" id="coCnt_2" value="42"><button rel="" class="OpenPopspan" title="" style="cursor:default"><span>기본형+확장형</span><b>42</b></button></li></ul>
+                <div class="guideTxt2">
+                    
+                    
+                    <!-- <p><i class="iconText_smooth icon_stroke icon_medium icon_pointColor">종합활용1</i>채용 + 재직자훈련</p>
+                    <p><i class="iconText_smooth icon_stroke icon_medium icon_pointColor">종합활용2</i>채용 + 재직자훈련 + 임금 + 배치승진</p> -->
+                </div>
+                <div style="display:table-row; text-align:center;">
+                    <div style="display:table-cell">
+                        <a class="tcs_White" href="/company/ch03/consulting_requestlist.do">컨설팅 신청하기</a>
+                        <!-- <a class="tcs_White"  href="javascript:alert('2022년도 NCS 기업활용 컨설팅 신청이 마감되었습니다.\n2023년도 NCS 기업활용 컨설팅 신청은 10월 1일 부터 가능합니다.');"><button><img src="/web/img/common/suggest_icon.png">컨설팅 신청</button></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ▼ 유형별 컨설팅 참여현황 영역 -->
+        <h3 class="btn_present tabBtn_1D1" rel="tabCon2" style="cursor: pointer;"><button class="tabindex"><span>유형별</span></button></h3>
+        <div class="typeCon con_present tabContent_1D1" id="tabCon2" style="display: none;"><!-- ← 평생경력개발경로 콘텐츠-->
+            
+            <!-- ▽ 종합활용1 -->
+            <h4 class="sectionTab tabBtn_2D1" rel="tabCon21" style="cursor: pointer;"><button class="tabindex">기본형(50)</button></h4>
+            <div class="sectionCon tabContent_2D1" id="tabCon21" style="display: none;">
+                <h5>기본형 전체<b>50</b></h5>
+                <ul>
+                    <li>서울<b>5</b></li>
+                    <li>경기<b>11</b></li>
+                    <li>인천<b>2</b></li>
+                    <li>강원<b>2</b></li>
+                    <li>충남<b>5</b></li>
+                    <li>대전<b>0</b></li>
+                    <li>충북<b>5</b></li>
+                    <li>세종<b>0</b></li>
+                    <li>경북<b>5</b></li>
+                    <li>대구<b>1</b></li>
+                    <li>울산<b>0</b></li>
+                    <li>부산<b>4</b></li>
+                    <li>경남<b>7</b></li>
+                    <li>전북<b>3</b></li>
+                    <li>전남<b>0</b></li>
+                    <li>광주<b>0</b></li>
+                    <li>제주<b>0</b></li>
+                </ul>
+                
+            </div>
+            
+            <!-- ▽ 종합활용2 -->
+            <h4 class="sectionTab tabBtn_2D1" rel="tabCon22" style="cursor: pointer;"><button class="tabindex">확장형(150)</button></h4>
+            <div class="sectionCon tabContent_2D1" id="tabCon22" style="display: none;">
+                <h5>확장형 전체<b>150</b></h5>
+                <ul>
+                    <li>서울<b>23</b></li>
+                    <li>경기<b>40</b></li>
+                    <li>인천<b>13</b></li>
+                    <li>강원<b>5</b></li>
+                    <li>충남<b>10</b></li>
+                    <li>대전<b>6</b></li>
+                    <li>충북<b>12</b></li>
+                    <li>세종<b>1</b></li>
+                    <li>경북<b>9</b></li>
+                    <li>대구<b>3</b></li>
+                    <li>울산<b>2</b></li>
+                    <li>부산<b>9</b></li>
+                    <li>경남<b>6</b></li>
+                    <li>전북<b>2</b></li>
+                    <li>전남<b>3</b></li>
+                    <li>광주<b>6</b></li>
+                    <li>제주<b>0</b></li>
+                </ul>
+                
+            </div>
+            
+            <!-- ▽ 재직자훈련 -->
+            <h4 class="sectionTab tabBtn_2D1 On" rel="tabCon23" style="cursor: pointer;"><button class="tabindex">기본형+확장형(250)</button></h4>
+            <div class="sectionCon tabContent_2D1" id="tabCon23" style="display: block;">
+                <h5>기본형+확장형 전체<b>250</b></h5>
+                <ul>
+                    <li>서울<b>42</b></li>
+                    <li>경기<b>56</b></li>
+                    <li>인천<b>10</b></li>
+                    <li>강원<b>8</b></li>
+                    <li>충남<b>12</b></li>
+                    <li>대전<b>13</b></li>
+                    <li>충북<b>12</b></li>
+                    <li>세종<b>3</b></li>
+                    <li>경북<b>5</b></li>
+                    <li>대구<b>4</b></li>
+                    <li>울산<b>2</b></li>
+                    <li>부산<b>8</b></li>
+                    <li>경남<b>25</b></li>
+                    <li>전북<b>18</b></li>
+                    <li>전남<b>6</b></li>
+                    <li>광주<b>20</b></li>
+                    <li>제주<b>6</b></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- ▼ 업종별 컨설팅 참여현황 영역 -->
+        <h3 class="btn_present tabBtn_1D1" rel="tabCon3" style="cursor: pointer;"><button class="tabindex"><span>업종별</span></button></h3><!-- ← NCS학습모듈검색 텝메뉴-->
+        <div class="jobCon con_present tabContent_1D1" id="tabCon3" style="display: none;"><!-- ← NCS학습모듈검색 콘텐츠-->
+            <ul class="jobCon_list">
+                <li><i>01</i>사업관리<b>3</b></li>
+                <li><i>02</i>경영·회계·사무<b>8</b></li>
+                <li><i>03</i>금융·보험<b>2</b></li>
+                <li><i>04</i>교육·자연·사회과학<b>1</b></li>
+                <li><i>05</i>법률·경찰·소방·교도·국방<b>0</b></li>
+                <li><i>06</i>보건·의료<b>6</b></li>
+                <li><i>07</i>사회복지·종교<b>1</b></li>
+                <li><i>08</i>문화·예술·디자인·방송<b>2</b></li>
+                <li><i>09</i>운전·운송<b>5</b></li>
+                <li><i>10</i>영업판매<b>8</b></li>
+                <li><i>11</i>경비·청소<b>6</b></li>
+                <li><i>12</i>이용·숙박·여행·오락·스포츠<b>31</b></li>
+                <li><i>13</i>음식서비스<b>3</b></li>
+                <li><i>14</i>건설<b>28</b></li>
+                <li><i>15</i>기계<b>90</b></li>
+                <li><i>16</i>재료<b>37</b></li>
+                <li><i>17</i>화학·바이오<b>41</b></li>
+                <li><i>18</i>섬유·의복<b>7</b></li>
+                <li><i>19</i>전기·전자<b>90</b></li>
+                <li><i>20</i>정보통신<b>49</b></li>
+                <li><i>21</i>식품가공<b>16</b></li>
+                <li><i>22</i>인쇄·목재·가구·공예<b>10</b></li>
+                <li><i>23</i>환경·에너지·안전<b>4</b></li>
+                <li><i>24</i>농림어업<b>2</b></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script> 
+$(document).ready(function(){
+	
+	$("#sch_searchKeywordOrg").on("keydown",function(e){
+		if(e.keyCode == 13){
+			fn_orgSch();
+		}
+	});
+});
+function fn_initScreen(){
+	$("[name=MapLink]").find("[rel='02']").click(); // 서울	
+	fn_areabox();
+}
+
+function fn_areabox(){
+	$(".map_count p").on('click',function(){
+		var rel = $(this).attr("rel");
+		
+		$("area[rel='"+rel+"']").click();
+	})
+	
+}
+
+function fn_schArea(cd,cnt){
+	$(".statePresent_data h3 span").text(cnt);
+	function fn_schAreaCallBack(data, responseData){
+		var data = data;
+		var tag =$('.statePresent_data').find("ul");
+		tag.find("li").remove();
+		var str = "";
+		$.each(data, function(idx){
+			var arr = data[idx];
+			str += "<li id='areali_"+idx+"'>";
+			str += "<input type='hidden' id='areaCd_"+idx+"' value='"+cd+"'/>";
+			str += "<input type='hidden' id='typeCd_"+idx+"' value='"+arr.cd+"'/>";
+			str += "<input type='hidden' id='typeCdNm_"+idx+"' value='"+arr.cdName+"'/>";
+			str += "<input type='hidden' id='coCnt_"+idx+"' value='"+arr.coCnt+"'/>";
+			str += "<button rel='' class='OpenPopspan' title='' style='cursor:default'><span>"+arr.cdName+"</span><b>"+arr.coCnt+"</b></button>";
+			str += "</li>";	
+			
+		});
+		tag.append(str);
+ 		fn_openPopClick();
+		$(tag.find("li")).on('click',function(){
+			var r = $(this).attr("id").replace("areali_","");
+			var areaCd = $(this).find("#areaCd_"+r).val();
+			var typeCd = $(this).find("#typeCd_"+r).val();
+			var typeCdNm = $(this).find("#typeCdNm_"+r).val();
+			var coCnt = $(this).find("#coCnt_"+r).val();
+			scwin.pageInfo = {"totPage" : 1, "totCnt" : 0, "pageSize" : 5, "pageIndex" : 0, "pageGrp" : 1};
+			fn_schAreaCnsltType(areaCd, typeCd, typeCdNm, coCnt);
+		});
+	}
+	
+    var options = {
+            url: scwin.schAreaUrl
+           ,reqData: {"bizCd":"202101","areaCd": gfn_str_parseNull(cd)}
+           ,loadingMsg : gsSchMsg
+           ,mode : "synchronous"
+           ,success: fn_schAreaCallBack
+        };
+    gfn_ajax_request(options);
+}
+
+
+
+function fn_schAreaCnsltType(areaCd, typeCd, typeCdNm, coCnt){
+
+var data = {"bizCd":"202101", "areaCd": gfn_str_parseNull(areaCd),"cnsltTypeCd":gfn_str_parseNull(typeCd)};
+$.each(scwin.pageInfo,function(key,val){
+    data[key] = val;
+});
+
+function fn_schAreaCnsltTypeCallBack(data, responseData){
+    var listData = responseData.data;
+    scwin.pageInfo = responseData.pageMap;
+    var pageList = responseData.pageList;
+    
+    $("#layerPop_company_present").find(".con_sectionTit").text(typeCdNm);
+    $("#layerPop_company_present").find(".con_sectionTit > span").text(coCnt);
+    var tbody = $("#layerPop_company_present").find("tbody");
+    tbody.find("tr").remove();
+    var str = "";
+    $.each(listData,function(idx){
+        var arr = data[idx];
+        str += "<tr>";
+        str += "<td>"+gfn_str_parseNull(arr.coName)+"</td>";
+        str += "<td>"+gfn_str_parseNull(arr.coTypeCdNm)+"</td>";
+        str += "<td class='lnlineData'>";
+        str += "<p><b>사업자등록번호</b>"+gfn_str_parseNull(arr.entsrNo)+"</p>";
+        str += "<p><b>전화번호</b>"+gfn_str_parseNull(arr.repTelno)+"</p>";
+        str += "<p><b>주소</b>"+gfn_str_parseNull(arr.addrFull)+"</p>";
+        str += "</td>";
+        str += "</tr>";
+        
+    });
+    tbody.append(str);
+    
+    // scwin.pageInfo = {"totPage" : 1, "totCnt" : 0, "pageSize" : 5, "pageIndex" : 0, "pageGrp" : 1};
+    var strPageing = "";
+    var pageTag = $("#layerPop_company_present").find(".paging > span");
+    pageTag.find("a").remove();
+    
+    strPageing += "<a href="+'"javascript:'+"fn_preGrpPageMove('"+scwin.pageInfo.pageIndex+"','"+areaCd+"','"+typeCd+"','"+typeCdNm+"','"+coCnt+"')"+';" class="btn_page"><i class="xi-backward"></i><span class="blind">이전 10페이지</span></a>';;
+    strPageing += "<a href="+'"javascript:'+"fn_prePageMove('"+scwin.pageInfo.pageIndex+"','"+areaCd+"','"+typeCd+"','"+typeCdNm+"','"+coCnt+"')"+';" class="mr10 btn_page"><i class="xi-step-backward"></i><span class="blind">이전페이지</span></a>';
+
+    $.each(pageList,function(idx){
+        var page = pageList[idx];
+        var strOn = "";
+        if( gfn_str_parseNull(page.on) == "Y"){
+            strOn = "on";
+        }
+        var pageIdx = page.idx+1;
+        strPageing +="<a class='"+strOn+"' href="+'"javascript:'+"fn_schAreaCnsltTypePage('"+page.idx+"','"+areaCd+"','"+typeCd+"','"+typeCdNm+"','"+coCnt+"')"+';">'+pageIdx+"</a>";	
+    });
+    strPageing += '<a href="javascript:'+"fn_nextPageMove('"+scwin.pageInfo.pageIndex+"','"+areaCd+"','"+typeCd+"','"+typeCdNm+"','"+coCnt+"')"+';" class="ml10 btn_page"><i class="xi-step-forward"></i><span class="blind">다음페이지</span></a>';
+    strPageing += '<a href="javascript:'+"fn_nextGrpPageMove('"+scwin.pageInfo.pageIndex+"','"+areaCd+"','"+typeCd+"','"+typeCdNm+"','"+coCnt+"')"+';" class="btn_page"><i class="xi-forward"></i><span class="blind">다음 10페이지</span></a>';
+    
+    pageTag.append(strPageing);
+}
+
+
+
+var options = {
+        url: scwin.schAreaCnsltTypeUrl
+       ,reqData: data
+       ,loadingMsg : gsSchMsg
+       ,mode : "synchronous"
+       ,success: fn_schAreaCnsltTypeCallBack
+    };
+gfn_ajax_request(options);
+}
+
+
+function fn_openPopClick(){
+	$('.OpenPop').on('click',function(){
+        var PopView = $(this).attr("rel");
+        if(!gfn_com_isEmptyObject(PopView)){
+        	var PopSet = $("#" + PopView).children('.layerPopup_box');
+            $("#" + PopView).fadeIn(300);
+            PopSet.css({
+                marginTop: (PopSet.height() * -0.5) - 40 + 'px',
+                marginLeft:  (PopSet.width() * -0.5) - 30 + 'px',
+                left : 50 + '%',
+                top : 50 + '%'
+            });
+            /*
+            console.log("PopSet.width() : " + PopSet.width());
+            console.log("PopSet.height() : " + PopSet.height());
+            */
+            $('body').css({
+                overflow: 'hidden'
+            });	
+        }
+    });
+}
+</script>
+</div>
+<!-- ******************************************************************************************************** 주요 빅데이터 > 기업활용 참여현황 END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ******************************************************************************************************** 주요 빅데이터 > 분야별 훈련과정 설계현황 START -->
+<div class="chart-area">
+
+<script type="text/javascript" src="web/js/jquery.bxslider.js"></script>
+<link rel="stylesheet" type="text/css" href="web/css/jquery.bxslider.css" />
+<!-- <link rel="stylesheet" type="text/css" href="web/css/contents.css" /> -->
+<script type="text/javascript" src="web/education/js/site.js"></script>
+<div class="col_width top_Height">
+    <!-- ▼ 분야별 훈련과정 설계현황 영역 -->
+    <div class="recruit_today">
+        <h2 class="tit_circleSummary">분야별 훈련과정 설계현황</h2>
+        <div class="circle_summary">
+            <p class="all_count">훈련과정 전체 - <b>10,225 </b>개</p>
+            <p class="txt_guide">대분류를 선택하시면 해당 대분류의 세분류 단위별 설계 현황을 확인하실 수 있습니다.</p>
+            <ul class="circleMain_slide">
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(01)" class="circle_box"><i class="icon01">01.사업관리 </i>
+                    <span><b>28</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(02)" class="circle_box"><i class="icon02">02.경영·회계·사무 </i>
+                    <span><b>2,486</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(03)" class="circle_box"><i class="icon03">03.금융·보험 </i>
+                    <span><b>81</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(04)" class="circle_box"><i class="icon04">04.교육·자연·사회과학 </i>
+                    <span><b>33</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(05)" class="circle_box"><i class="icon05">05.법률·경찰·소방·교도·국방 </i>
+                    <span><b>109</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(06)" class="circle_box"><i class="icon06">06.보건·의료 </i>
+                    <span><b>53</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(07)" class="circle_box"><i class="icon07">07.사회복지·종교 </i>
+                    <span><b>225</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(08)" class="circle_box"><i class="icon08">08.문화·예술·디자인·방송 </i>
+                    <span><b>807</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(09)" class="circle_box"><i class="icon09">09.운전·운송 </i>
+                    <span><b>32</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(10)" class="circle_box"><i class="icon10">10.영업판매 </i>
+                    <span><b>96</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(11)" class="circle_box"><i class="icon11">11.경비·청소 </i>
+                    <span><b>49</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(12)" class="circle_box"><i class="icon12">12.이용·숙박·여행·오락·스포츠 </i>
+                    <span><b>496</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(13)" class="circle_box"><i class="icon13">13.음식서비스 </i>
+                    <span><b>794</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(14)" class="circle_box"><i class="icon14">14.건설 </i>
+                    <span><b>721</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(15)" class="circle_box"><i class="icon15">15.기계 </i>
+                    <span><b>1,101</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(16)" class="circle_box"><i class="icon16">16.재료 </i>
+                    <span><b>285</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(17)" class="circle_box"><i class="icon17">17.화학·바이오 </i>
+                    <span><b>19</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(18)" class="circle_box"><i class="icon18">18.섬유·의복 </i>
+                    <span><b>169</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(19)" class="circle_box"><i class="icon19">19.전기·전자 </i>
+                    <span><b>564</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(20)" class="circle_box"><i class="icon20">20.정보통신 </i>
+                    <span><b>977</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(21)" class="circle_box"><i class="icon21">21.식품가공 </i>
+                    <span><b>340</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(22)" class="circle_box"><i class="icon22">22.인쇄·목재·가구·공예 </i>
+                    <span><b>459</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(23)" class="circle_box"><i class="icon23">23.환경·에너지·안전 </i>
+                    <span><b>245</b></span>
+                    </a></li>
+                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(24)" class="circle_box"><i class="icon24">24.농림어업 </i>
+                    <span><b>56</b></span>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+function fn_clickLayer(seq){
+    var reqData = {};
+    reqData.seq = seq;
+    
+    var options = {
+        url         : "/education/selectPh0101.do"
+       ,reqData : reqData       
+       ,mode    : "synchronous"
+       ,success : fn_schCallBack
+    };
+    gfn_ajax_request(options);  
+
+}
+</script>
+</div>
+<!-- ******************************************************************************************************** 주요 빅데이터 > 분야별 훈련과정 설계현황 END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ********************************************************** section 03 // END -->
+
+
+
+            <!-- ********************************************************** section 04 (COMMON LIST) // START -->
+            <section class="ncs-content-sect main-sect-04">
+                <div class="sect-guide sect-04-post">
+                    
+                    <div class="shortlist-area">
+                        <!-- 블라인드채용 소식 --> 
+                        <h2 class="sect-guide-tit">블리인드채용 소식</h2>
+                        <div class="shortlist-box">
+                            <div class="news-tab news-left">
+                                <div class="news-tab-nav">
+                                    <button type="button" class="active">공지사항</button>
+                                    <button type="button">자료실</button>
+                                    <button type="button">NCS사전공지</button>
+                                    <button type="button">NCS자료실</button>
+                                    <button type="button">학습모듈자료실</button>
+                                    <button type="button" class="icon-news-more"><span class="screen-out">더보기</button>
+                                </div>
+                                <ul class="news-tab-list">
+                                    <li>
+                                        <a href="" class="news-tab-link"><span class="screen-out">공지글 상세보기 이동</span></a>
+                                        <div class="tab-label-bar">
+                                            <span class="tab-label">공지사항</span>
+                                            <span class="latest-label">NEW</span>
+                                        </div>
+                                        <h3 class="ellipsis">경남 디지털 채움 교육(경남경제진흥원, 한국산업인력공단)</h3>
+                                        <ul>
+                                            <li class="icon-date">2022-01-20</li>
+                                            <li class="icon-view">461</li>
+                                        </ul>
+                                        <p class="ellipsis">경상남도경제진흥원과 한국 생산성본부에서 진행하는 테스트 작성글</p>
+                                    </li>
+                                    <li>
+                                        <a href="" class="news-tab-link"><span class="screen-out">공지글 상세보기 이동</span></a>
+                                        <div class="tab-label-bar">
+                                            <span class="tab-label">공지사항</span>
+                                        </div>
+                                        <h3 class="ellipsis">네이버 카카오와 함께하는 국민디자인단 모집</h3>
+                                        <ul>
+                                            <li class="icon-date">2022-01-15</li>
+                                            <li class="icon-view">350</li>
+                                        </ul>
+                                        <p class="ellipsis">이미지 첨부</p>
+                                    </li>
+                                    <li>
+                                        <a href="" class="news-tab-link"><span class="screen-out">공지글 상세보기 이동</span></a>
+                                        <div class="tab-label-bar">
+                                            <span class="tab-label">공지사항</span>
+                                        </div>
+                                        <h3 class="ellipsis">NCS 직업기초능력 온라인 모의시험 응시자 테스트 작성글</h3>
+                                        <ul>
+                                            <li class="icon-date">2022-01-12</li>
+                                            <li class="icon-view">625</li>
+                                        </ul>
+                                        <p class="ellipsis">접수페이지 링크 : http://asq.kr/Y0lsAv</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="news-tab news-right">
+                                <div class="news-tab-nav">
+                                    <button type="button" class="active">청년기자</button>
+                                    <button type="button">뉴스레터</button>
+                                    <button type="button" class="icon-news-more"><span class="screen-out">더보기</button>
+                                </div>
+                                <ul class="news-tab-list">
+                                    <li>
+                                        <a href="" class="news-tab-link"><span class="screen-out">공지글 상세보기 이동</span></a>
+                                        <div class="tab-label-bar">
+                                            <span class="tab-label">공지사항</span>
+                                        </div>
+                                        <h3 class="ellipsis">한국자산관리공사 오픈 채팅 채용설명회</h3>
+                                        <ul>
+                                            <li class="icon-date">2022-01-16</li>
+                                            <li class="icon-view">356</li> 
+                                        </ul>
+                                        <p class="ellipsis">이미지 첨부</p>
+                                    </li>
+                                    <li>
+                                        <a href="" class="news-tab-link"><span class="screen-out">공지글 상세보기 이동</span></a>
+                                        <div class="tab-label-bar">
+                                            <span class="tab-label">공지사항</span>
+                                        </div>
+                                        <h3 class="ellipsis">2020년 NCS 청년 기자단 합격자 발표</h3>
+                                        <ul>
+                                            <li class="icon-date">2021-12-31</li>
+                                            <li class="icon-view">987</li>
+                                        </ul>
+                                        <p class="ellipsis">2020년 NCS 청년 기자단에 최종 합격하신 분들 진심으로 축하드립니다. </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //블라인드채용 소식 --> 
+                    </div>
+
+                </div>
+            </section>
+            <!-- ********************************************************** section 04 (COMMON LIST) // END -->
+            
+            
+            <!-- ********************************************************** 하단 관련사이트 // START -->
+            <div class="foot_banner">
+                <div class="col_width">
+                    <h2>관련사이트</h2>
+                    <ul class="logoArea" id="bannerList">
+                        <li><a href="http://www.hrdkorea.or.kr" target="_blank" title="한국산업인력공단"><img src="web/img/common/banner_01.gif" alt="한국산업인력공단" /></a></li>
+                        <li><a href="http://www.q-net.or.kr" target="_blank" title="큐넷"><img src="web/img/common/banner_02.gif" alt="큐넷" /></a></li>
+                        <li><a href="http://www.hrd.go.kr" target="_blank" title="HRD-NET"><img src="web/img/common/banner_03.gif" alt="HRD-NET" /></a></li>
+                        <li><a href="http://www.worldjob.or.kr" target="_blank" title="월드잡"><img src="web/img/common/banner_04.gif" alt="월드잡" /></a></li>
+                        <li><a href="http://www.keis.or.kr" target="_blank" title="한국고용정보원"><img src="web/img/common/banner_05.gif" alt="한국고용정보원" /></a></li>
+                        <li><a href="http://www.worktv.or.kr" target="_blank" title="한국직업방송"><img src="web/img/common/banner_06.gif" alt="한국직업방송" /></a></li>
+                        <li><a href="http://www.work.go.kr" target="_blank" title="워크넷"><img src="web/img/common/banner_07.gif" alt="워크넷" /></a></li>
+                        <li><a href="http://www.krivet.re.kr" target="_blank" title="한국직업능력개발원"><img src="web/img/common/banner_08.gif" alt="한국직업능력개발원" /></a></li>
+                        <li><a href="http://myjobacademy.kr" target="_blank" title="청년취업아카데미"><img src="web/img/common/banner_09.gif" alt="청년취업아카데미" /></a></li>
+                        <li><a href="http://www.moel.go.kr" target="_blank" title="고용노동부"><img src="web/img/common/banner_10.gif" alt="고용노동부" /></a></li>
+                        <li><a href="http://www.moe.go.kr" target="_blank" title="교육부"><img src="web/img/common/banner_11.gif" alt="교육부" /></a></li>
+                        <li><a href="http://www.koreatech.ac.kr" target="_blank" title="한국기술교육대학교"><img src="web/img/common/banner_12.gif" alt="한국기술교육대학교" /></a></li>
+                        <li><a href="http://c.q-net.or.kr" target="_blank" title="시큐넷"><img src="web/img/common/banner_13.png" alt="시큐넷" /></a></li>
+                        <li><a href="http://www.hrd.go.kr/hrdp/gi/pgieo/PGIEO0300D.do" target="_blank" title="일학습"><img src="web/img/common/banner_14.png" alt="일학습" /></a></li>
+                        <li><a href="http://www.isckorea.or.kr" target="_blank" title="인적자원개발"><img src="web/img/common/banner_15.png" alt="인적자원개발" /></a></li>
+                        <li><a href="https://pdms.ncs.go.kr" target="_blank" title="PDMS"><img src="web/img/common/banner_16.png" alt="PDMS" /></a></li>
+                    </ul>
+                    <dl class="controler">
+                        <dt class="blind">배너 컨트롤러</dt>
+                        <dd><a href="javascript:;" class="prev" onclick="rolling_next();return false;">이전</a></dd>
+                        <dd><a href="javascript:;" class="pause" style="display:block;" onclick="rolling_stop();return false;">정지</a></dd>
+                        <dd><a href="javascript:;" class="play" style="display:none;" onclick="rolling_start();return false;">재생</a></dd>
+                        <dd><a href="javascript:;" class="next" onclick="rolling_prev();return false;">다음</a></dd>
+                    </dl>
+                </div>
+            </div>
+            <script type="text/javascript">
+                var banner  = new hh_rolling('bannerList');
+                var bannerList = $("#bannerList li").length;
+                rolling_start();
+            </script>
+            <!-- ********************************************************** 하단 관련사이트 // END -->
+
+        </div>
+
+        <!-- ********************************************************** footer // START -->
+        <div class="footer">
+            <div class="col_width">
+                <ul class="footer_menu">
+                    <li><a href="#layerPop_policy1" class="tc_point OpenPop" rel="layerPop_policy1">개인정보처리방침</a></li>
+                    <li><a href="#layerPop_policy2" class="OpenPop" rel="layerPop_policy2">저작권정책</a></li>
+                    <li><a href="#layerPop_searchOrgan" class="OpenPop" rel="layerPop_searchOrgan">직원정보조회</a></li>
+                    <li><a href="#layerPop_openApi" class="OpenPop" rel="layerPop_openApi">OPEN API 서비스(NCS오픈데이터)</a></li>
+                    <li><a href="https://remote.hrdkorea.or.kr" class="OpenPop" target="_blank">원격지원</a></li>
+                </ul>
+                <div class="company_info">
+                    <p>(우)44538 울산광역시 중구 종가로 345 한국산업인력공단</p>
+                    <p><b>NCS 및 사이트 이용안내(한국산업인력공단) :</b> 1644-8100 &nbsp; | &nbsp; <b>학습모듈 관련 문의(한국직업능력연구원):</b> 044-415-3926 </p>
+                    <p class="mt15">Copyright ⓒ 1999 - 2021 한국산업인력공단 all rights reserved.</p>
+                </div>
+                <div class="footer_mark">
+                    <a href="#layerPop_clean" class="OpenPop" rel="layerPop_clean">
+                        <img src="web/img/common/clean_icon.png" alt="청렴" style="width:100px; height:80px; margin-right: 176px;">
+                    </a>
+                </div>
+                <div class="footer_mark">
+                    <a href="http://www.kogl.or.kr/info/license.do#01-tab" target="_blank">
+                        <img src="web/img/common/kogl_type.jpg" alt="공공누리저작물자유이용허락1,2유형 마크">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- ********************************************************** footer // END  -->
+        
+    </div>
+
+</body>
+</html>
