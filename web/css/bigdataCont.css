@@ -16,17 +16,17 @@
 .tit_present {padding:50px 0 0 50px; font-size:30px; color:#fff; font-family:'NGothic';}
 .tit_present span {display:block; font-size: 34px; padding:12px 0 0;}
 .copy_present {padding:30px 0 0 50px; font-size:20px; color:#ff6;}
-.present_box .btn_present {position:absolute;bottom: 20px;left: 21px;width: 75px;text-align:center;color:#fff;font-size: 1.067em;/* font-family:'NGothic'; */}
-.present_box .btn_present:before {content:'';display:block;margin: 0;width: 75px;height: 75px;line-height:47px;border-radius:50%;background: #553ea2 url(../company/img/icon_visualConOn.png) repeat-y 6px 18px;box-sizing:border-box;background-size: 64px;}
+.present_box .btn_present {position:absolute;bottom: 20px;left: 25px;width: 70px;text-align:center;color:#fff;font-size: 1.067em;/* font-family:'NGothic'; */}
+.present_box .btn_present:before {content:'';display:block;margin: 0;width: 70px;height: 70px;line-height:47px;border-radius:50%;background: #553ea2 url(../company/img/icon_visualConOn.png) repeat-y 4px 7px;box-sizing:border-box;background-size: 64px;}
 .present_box .btn_present span {color:#fff;font-weight: 500;line-height: 2.4em;}
 .present_box .btn_present.On {color:#ff6;}
 .present_box .btn_present.On:before {background-color:#fff; background-image:url(../company/img/icon_visualConOff.png);}
 .present_box .btn_present[rel='tabCon1'] {bottom: auto;top: 20px;}
 .present_box .btn_present[rel='tabCon2'] {bottom: 50%;transform: translateY(50%);}
 .present_box .btn_present[rel='tabCon3'] {bottom: 20px;}
-.present_box .btn_present[rel='tabCon1']:before {background-position-y: 20px;}
+.present_box .btn_present[rel='tabCon1']:before {background-position-y: 17px;}
 .present_box .btn_present[rel='tabCon2']:before {background-position-y: -66px;}
-.present_box .btn_present[rel='tabCon3']:before {background-position-y: -145px;}
+.present_box .btn_present[rel='tabCon3']:before {background-position-y: -148px;}
 
 
 
