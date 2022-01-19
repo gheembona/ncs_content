@@ -106,7 +106,7 @@
 
 
 /* 분야별 훈련과정 설계환황 콘텐츠 */
-.col_width {width: 100%;}
+.chart-area > .col_width {width: 100% !important;}
 .recruit_today {border: 0;}
 .tit_circleSummary {height: 60px;line-height: 60px;text-indent: 20px;color:#fff;font-size: 1.600em;background: #0e76bc;font-weight: 500;border-top-left-radius: 22px;border-top-right-radius: 22px;/* border-bottom-right-radius: 22px; *//* border-bottom-left-radius: 22px; */}
 .circle_summary {position:relative;padding:40px 30px;background: transparent;text-align:center;width: calc(100% - 100px);margin: auto;}
