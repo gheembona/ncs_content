@@ -16,10 +16,10 @@ $(document).ready(function(){
     
     ////메인 분야별 교육·훈련과정 설계현황
     $('.circleMain_slide').bxSlider({
-        minSlides: 6,
-        maxSlides: 6,
-        slideWidth: 153,
-        slideMargin: 25,
+        minSlides: 4,
+        maxSlides: 4,
+        slideWidth: 180,
+        slideMargin: 0,
         auto: false,
         pause: 4000
     });

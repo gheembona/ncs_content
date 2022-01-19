@@ -33,6 +33,13 @@
                 keywordTipBlind();
             });
         });
+
+        function sectChartTab(tabNum, tabObj){
+            $('[data-id]').hide();
+            $('[data-id="sectChart'+tabNum+'"]').show();
+            $('#sectChartTab').find('li').removeClass('active');
+            $(tabObj).addClass('active');
+        }
     </script>
 
 </head>
@@ -822,14 +829,13 @@
                     <p class="sect-guide-subtit">실제 현황 빅데이터를 확인해주세요</p>
                     <h2 class="sect-guide-tit">주요 빅데이터</h2>
                     <div class="chart-wrap">
-                        <ul>
-                            <li>능력단위 활용추이</li>
-                            <li>기업활용 참여현황</li>
-                            <li class="active">분야별 훈련과정 설계현황</li>
+                        <ul id="sectChartTab">
+                            <li onclick="sectChartTab('01', this);">능력단위 활용추이</li>
+                            <li onclick="sectChartTab('02', this);">기업활용 참여현황</li>
+                            <li class="active" onclick="sectChartTab('03', this);">분야별 훈련과정 설계현황</li>
                         </ul>
                         <div class="chart-right">
-                            <p>기업활용 참여현황 <span>(컨설팅 참여기업 450)</span></p>
-                            <div class="chart-area" style="display: none;">
+                            <div class="chart-area" data-id="sectChart01" style="display: none;">
                                 <!-- 능력단위 활용추이 영역 -->
                                 <div id="chartArea"></div>
                             </div>
@@ -863,10 +869,11 @@
 
 
 <!-- ******************************************************************************************************** 주요 빅데이터 > 기업활용 참여현황 START -->
-<div class="chart-area cont2"  style="display: none;">
+<div class="chart-area cont2" data-id="sectChart02" style="display: none;">
 <link rel="stylesheet" type="text/css" href="web/css/bigdataCont.css" />
 <link rel="stylesheet" type="text/css" href="web/css/xeicon.css" />
 <script type="text/javascript" src="web/js/gfn_ajax.js"></script>
+<p>기업활용 참여현황 <span>(컨설팅 참여기업 450)</span></p>
 <div class="col_width present">
     <!-- ▼ 컨설팅 참여현황 영역 -->
     <div class="present_box">
@@ -1236,7 +1243,7 @@ function fn_openPopClick(){
 
 
 <!-- ******************************************************************************************************** 주요 빅데이터 > 분야별 훈련과정 설계현황 START -->
-<div class="chart-area">
+<div class="chart-area" data-id="sectChart03">
 
 <script type="text/javascript" src="web/js/jquery.bxslider.js"></script>
 <link rel="stylesheet" type="text/css" href="web/css/jquery.bxslider.css" />
@@ -1250,79 +1257,127 @@ function fn_openPopClick(){
             <p class="all_count">훈련과정 전체 - <b>10,225 </b>개</p>
             <p class="txt_guide">대분류를 선택하시면 해당 대분류의 세분류 단위별 설계 현황을 확인하실 수 있습니다.</p>
             <ul class="circleMain_slide">
-                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(01)" class="circle_box"><i class="icon01">01.사업관리 </i>
-                    <span><b>28</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(02)" class="circle_box"><i class="icon02">02.경영·회계·사무 </i>
-                    <span><b>2,486</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(03)" class="circle_box"><i class="icon03">03.금융·보험 </i>
-                    <span><b>81</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(04)" class="circle_box"><i class="icon04">04.교육·자연·사회과학 </i>
-                    <span><b>33</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(05)" class="circle_box"><i class="icon05">05.법률·경찰·소방·교도·국방 </i>
-                    <span><b>109</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(06)" class="circle_box"><i class="icon06">06.보건·의료 </i>
-                    <span><b>53</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(07)" class="circle_box"><i class="icon07">07.사회복지·종교 </i>
-                    <span><b>225</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(08)" class="circle_box"><i class="icon08">08.문화·예술·디자인·방송 </i>
-                    <span><b>807</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(09)" class="circle_box"><i class="icon09">09.운전·운송 </i>
-                    <span><b>32</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(10)" class="circle_box"><i class="icon10">10.영업판매 </i>
-                    <span><b>96</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(11)" class="circle_box"><i class="icon11">11.경비·청소 </i>
-                    <span><b>49</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(12)" class="circle_box"><i class="icon12">12.이용·숙박·여행·오락·스포츠 </i>
-                    <span><b>496</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(13)" class="circle_box"><i class="icon13">13.음식서비스 </i>
-                    <span><b>794</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(14)" class="circle_box"><i class="icon14">14.건설 </i>
-                    <span><b>721</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(15)" class="circle_box"><i class="icon15">15.기계 </i>
-                    <span><b>1,101</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(16)" class="circle_box"><i class="icon16">16.재료 </i>
-                    <span><b>285</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(17)" class="circle_box"><i class="icon17">17.화학·바이오 </i>
-                    <span><b>19</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(18)" class="circle_box"><i class="icon18">18.섬유·의복 </i>
-                    <span><b>169</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(19)" class="circle_box"><i class="icon19">19.전기·전자 </i>
-                    <span><b>564</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(20)" class="circle_box"><i class="icon20">20.정보통신 </i>
-                    <span><b>977</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(21)" class="circle_box"><i class="icon21">21.식품가공 </i>
-                    <span><b>340</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(22)" class="circle_box"><i class="icon22">22.인쇄·목재·가구·공예 </i>
-                    <span><b>459</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(23)" class="circle_box"><i class="icon23">23.환경·에너지·안전 </i>
-                    <span><b>245</b></span>
-                    </a></li>
-                    <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(24)" class="circle_box"><i class="icon24">24.농림어업 </i>
-                    <span><b>56</b></span>
-                    </a></li>
-            </ul>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(01)" class="circle_box">
+                    <i class="icon01">01.사업관리 </i>
+                        <strong>28</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(02)" class="circle_box">
+                        <i class="icon02">02.경영·회계·사무 </i>
+                        <strong>2,486</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(03)" class="circle_box">
+                        <i class="icon03">03.금융·보험 </i>
+                        <strong>81</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(04)" class="circle_box">
+                        <i class="icon04">04.교육·자연·사회과학 </i>
+                        <strong>33</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(05)" class="circle_box">
+                        <i class="icon05">05.법률·경찰·소방·교도·국방 </i>
+                        <strong>109</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(06)" class="circle_box">
+                        <i class="icon06">06.보건·의료 </i>
+                        <strong>53</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(07)" class="circle_box">
+                        <i class="icon07">07.사회복지·종교 </i>
+                        <strong>225</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(08)" class="circle_box">
+                        <i class="icon08">08.문화·예술·디자인·방송 </i>
+                        <strong>807</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(09)" class="circle_box">
+                        <i class="icon09">09.운전·운송 </i>
+                        <strong>32</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(10)" class="circle_box">
+                        <i class="icon10">10.영업판매 </i>
+                        <strong>96</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(11)" class="circle_box">
+                        <i class="icon11">11.경비·청소 </i>
+                        <strong>49</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(12)" class="circle_box">
+                        <i class="icon12">12.이용·숙박·여행·오락·스포츠 </i>
+                        <strong>496</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(13)" class="circle_box">
+                        <i class="icon13">13.음식서비스 </i>
+                        <strong>794</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(14)" class="circle_box">
+                        <i class="icon14">14.건설 </i>
+                        <strong>721</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(15)" class="circle_box">
+                        <i class="icon15">15.기계 </i>
+                        <strong>1,101</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(16)" class="circle_box">
+                        <i class="icon16">16.재료 </i>
+                        <strong>285</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(17)" class="circle_box">
+                        <i class="icon17">17.화학·바이오 </i>
+                        <strong>19</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(18)" class="circle_box">
+                        <i class="icon18">18.섬유·의복 </i>
+                        <strong>169</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(19)" class="circle_box">
+                        <i class="icon19">19.전기·전자 </i>
+                        <strong>564</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(20)" class="circle_box">
+                        <i class="icon20">20.정보통신 </i>
+                        <strong>977</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(21)" class="circle_box">
+                        <i class="icon21">21.식품가공 </i>
+                        <strong>340</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(22)" class="circle_box">
+                        <i class="icon22">22.인쇄·목재·가구·공예 </i>
+                        <strong>459</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(23)" class="circle_box">
+                        <i class="icon23">23.환경·에너지·안전 </i>
+                        <strong>245</strong>
+                    </a>
+                </li>
+                <li class="slide"><a href="#layerPop_reportM" onclick="fn_clickLayer(24)" class="circle_box">
+                        <i class="icon24">24.농림어업 </i>
+                        <strong>56</strong>
+                    </a>
+                </li>
+        </ul>
         </div>
     </div>
 </div>
