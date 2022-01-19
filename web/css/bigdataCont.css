@@ -118,8 +118,8 @@
 .circle_summary li .circle_box:hover,
 .circle_summary li .circle_box:focus {border-color: #0e76bc;box-shadow: rgba(14, 118, 188, 0.2) 0px 0px 15px;}
 .circle_summary li .circle_box strong {display:block;width:100%;font-weight: 600;font-size: 2.000em;height: 50px;line-height: 50px;box-sizing:border-box;color: #000000;/* background: #0e76bc; *//* border-radius: 20px; */letter-spacing: -0.03em;}
-.circle_summary li .circle_box i {display: flex;color:#333;font-size: 1em;flex-direction: column;align-items: center;height: 110px;justify-content: center;padding: 0 20px;}
-.circle_summary li .circle_box i > span {word-break: keep-all;-ms-word-break: keep-all;line-height: 1.2em;letter-spacing: -0.03em;display: block;width: 125px;}
+.circle_summary li .circle_box i {display: flex;color:#333;font-size: 1em;flex-direction: column;align-items: center;height: 110px;justify-content: center;padding: 0 20px;position: relative;}
+.circle_summary li .circle_box i > span {word-break: keep-all;-ms-word-break: keep-all;line-height: 1.2em;letter-spacing: -0.05em;display: block;width: 130px;font-size: 1.133em;color: #7f7f7f;margin-top: 65px;}
 
 .circle_summary .bx-wrapper .bx-prev {left:-50px; background:url(../education/img/controller02.png) no-repeat 0 0;}
 .circle_summary .bx-wrapper .bx-next {right:-50px; background:url(../education/img/controller02.png) no-repeat 0 -35px}
@@ -128,7 +128,7 @@
 .circle_summary .bx-wrapper .bx-pager.bx-default-pager a {background:none; width:14px; height:14px; border:3px solid #949291; display:inline-block; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; transition:all .3s ease;}
 .circle_summary .bx-wrapper .bx-pager.bx-default-pager a.active {border-color:#33ccff; width:33px; background:#33ccff;}
 
-.circle_box > i::before {content:'';display:block;width: 52px;height: 70px;background-size: 250px !important;background-position: center left !important;}
+.circle_box > i::before {content:'';display:block;width: 52px;height: 70px;background-size: 250px !important;background-position: center left !important;top: 0;position: absolute;}
 .icon01::before {background:url(../img/common/Icon01.png) no-repeat 28px 2px;}
 .icon02::before {background:url(../img/common/Icon02.png) no-repeat 28px 2px;}
 .icon03::before {background:url(../img/common/Icon03.png) no-repeat 28px 2px;}
